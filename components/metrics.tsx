@@ -5,18 +5,18 @@ export function Metrics() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-32">
           {/* Metric 1 */}
           <div className="text-center">
-            <div className="font-sans font-bold text-6xl md:text-7xl text-[#8B1E24] mb-4 uppercase tracking-tight">
+            <div className="font-sans font-bold text-4xl md:text-5xl text-[#8B1E24] mb-4 uppercase tracking-tight">
               +25 AÑOS
             </div>
-            <p className="font-serif text-lg md:text-xl text-[#333333]">De experiencia en el mercado</p>
+            <p className="font-serif text-base md:text-lg text-[#333333]">De experiencia en el mercado</p>
           </div>
 
           {/* Metric 2 */}
           <div className="text-center">
-            <div className="font-sans font-bold text-6xl md:text-7xl text-[#8B1E24] mb-4 uppercase tracking-tight">
+            <div className="font-sans font-bold text-4xl md:text-5xl text-[#8B1E24] mb-4 uppercase tracking-tight">
               +300
             </div>
-            <p className="font-serif text-lg md:text-xl text-[#333333]">Soportes publicitarios disponibles</p>
+            <p className="font-serif text-base md:text-lg text-[#333333]">Soportes publicitarios disponibles</p>
           </div>
         </div>
       </div>

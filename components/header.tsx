@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -25,25 +26,24 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#8B1E24] text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <div className="text-2xl font-bold font-sans tracking-tight">LOGO</div>
+            <Image src="/advertising-company-logo.jpg" alt="Logo" width={120} height={40} className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("nosotros")}
-              className="font-sans text-base hover:opacity-80 transition-opacity"
+              className="font-sans text-sm hover:opacity-80 transition-opacity"
             >
               Nosotros
             </button>
-            <Link href="/soportes" className="font-sans text-base hover:opacity-80 transition-opacity">
+            <Link href="/soportes" className="font-sans text-sm hover:opacity-80 transition-opacity">
               Soportes
             </Link>
             <button
               onClick={() => scrollToSection("contacto")}
-              className="font-sans text-base hover:opacity-80 transition-opacity"
+              className="font-sans text-sm hover:opacity-80 transition-opacity"
             >
               Contacto
             </button>
@@ -62,20 +62,20 @@ export function Header() {
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
             <button
               onClick={() => scrollToSection("nosotros")}
-              className="font-sans text-lg text-left py-2 hover:opacity-80 transition-opacity"
+              className="font-sans text-base text-left py-2 hover:opacity-80 transition-opacity"
             >
               Nosotros
             </button>
             <Link
               href="/soportes"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-sans text-lg text-left py-2 hover:opacity-80 transition-opacity"
+              className="font-sans text-base text-left py-2 hover:opacity-80 transition-opacity"
             >
               Soportes
             </Link>
             <button
               onClick={() => scrollToSection("contacto")}
-              className="font-sans text-lg text-left py-2 hover:opacity-80 transition-opacity"
+              className="font-sans text-base text-left py-2 hover:opacity-80 transition-opacity"
             >
               Contacto
             </button>
