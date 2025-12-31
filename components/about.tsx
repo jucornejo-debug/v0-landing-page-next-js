@@ -8,9 +8,7 @@ export function About() {
           {/* Left: Text */}
           <div>
             <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary uppercase mb-8 tracking-tight">
-              QUIENES
-              <br />
-              SOMOS
+              QUIENES SOMOS
             </h2>
 
             <div className="space-y-6 font-serif text-base md:text-lg text-dark-text leading-relaxed">
