@@ -1,17 +1,20 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center">
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-        <div
-          className="w-[50%] h-[50%] bg-cover bg-center"
-          style={{
-            backgroundImage:
-              src="/Hipervallado 4.jpg",
-          }}
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+      
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/Hipervallado 4.jpg"
+          alt="Hipervallado"
+          fill
+          priority
+          className="object-cover"
         />
       </div>
 
