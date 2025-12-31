@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function About() {
   return (
-    <section id="nosotros" className="bg-background py-20 md:py-32 leading-3">
+    <section id="nosotros" className="bg-background py-10 md:py-32 leading-3">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Text */}
