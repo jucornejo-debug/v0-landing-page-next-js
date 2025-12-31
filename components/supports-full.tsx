@@ -59,8 +59,8 @@ export function SupportsFull() {
   ]
 
   return (
-    <section id="soportes" className="bg-[#F6EFE6]">
-      <div className="bg-[#8B1E24] w-full">
+    <section id="soportes" className="bg-background">
+      <div className="bg-primary w-full">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 items-center gap-8 py-12 md:py-16">
             <div className="text-left">
@@ -72,7 +72,7 @@ export function SupportsFull() {
               <p className="font-serif text-base md:text-lg text-white mb-6 md:mb-8">
                 Soportes de alto impacto diseñados para que tu marca se vea, se recuerde y se destaque en la calle.
               </p>
-              <button className="bg-[#F6EFE6] text-[#8B1E24] font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-white transition-colors">
+              <button className="bg-background text-primary font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-white transition-colors">
                 Conocé más
               </button>
             </div>
@@ -94,7 +94,7 @@ export function SupportsFull() {
       <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Grandes Formatos */}
         <div className="mb-16">
-          <h3 className="font-sans font-bold text-2xl md:text-4xl text-[#8B1E24] uppercase mb-8 tracking-tight text-center">
+          <h3 className="font-sans font-bold text-2xl md:text-4xl text-primary uppercase mb-8 tracking-tight text-center">
             GRANDES FORMATOS
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
@@ -106,7 +106,7 @@ export function SupportsFull() {
 
         {/* Vallados */}
         <div className="mb-16">
-          <h3 className="font-sans font-bold text-2xl md:text-4xl text-[#8B1E24] uppercase mb-8 tracking-tight text-center">
+          <h3 className="font-sans font-bold text-2xl md:text-4xl text-primary uppercase mb-8 tracking-tight text-center">
             VALLADOS
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
@@ -118,7 +118,7 @@ export function SupportsFull() {
 
         {/* Formatos Digitales */}
         <div>
-          <h3 className="font-sans font-bold text-2xl md:text-4xl text-[#8B1E24] uppercase mb-8 tracking-tight text-center">
+          <h3 className="font-sans font-bold text-2xl md:text-4xl text-primary uppercase mb-8 tracking-tight text-center">
             DIGITALES
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
@@ -157,14 +157,14 @@ function SupportCard({ item }: { item: { title: string; location: string; images
           <>
             <button
               onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#8B1E24] w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
               aria-label="Previous image"
             >
               ‹
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#8B1E24] w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
               aria-label="Next image"
             >
               ›
@@ -174,10 +174,10 @@ function SupportCard({ item }: { item: { title: string; location: string; images
       </div>
 
       <div className="text-center">
-        <h4 className="font-sans font-bold text-lg md:text-xl text-[#8B1E24] uppercase mb-1 tracking-tight">
+        <h4 className="font-sans font-bold text-lg md:text-xl text-primary uppercase mb-1 tracking-tight">
           {item.title}
         </h4>
-        <p className="font-serif text-sm md:text-base text-[#8B1E24]">//Ubicación: {item.location}</p>
+        <p className="font-serif text-sm md:text-base text-primary">//Ubicación: {item.location}</p>
       </div>
 
       {item.images.length > 1 && (
@@ -187,7 +187,7 @@ function SupportCard({ item }: { item: { title: string; location: string; images
               key={index}
               onClick={() => setCurrentImage(index)}
               className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentImage ? "bg-[#8B1E24]" : "bg-gray-300"
+                index === currentImage ? "bg-primary" : "bg-gray-300"
               }`}
               aria-label={`Go to image ${index + 1}`}
             />

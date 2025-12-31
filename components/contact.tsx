@@ -28,13 +28,13 @@ export function Contact() {
   }
 
   return (
-    <section id="contacto" className="bg-[#F6EFE6] py-20 md:py-32">
+    <section id="contacto" className="bg-background py-20 md:py-32">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-12">
-          <h2 className="font-sans font-bold text-3xl md:text-4xl text-[#8B1E24] uppercase mb-4 tracking-tight">
+          <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary uppercase mb-4 tracking-tight">
             CONTÁCTANOS
           </h2>
-          <p className="font-serif text-base md:text-lg text-[#333333]">Estamos para ayudarte con tu próxima campaña</p>
+          <p className="font-serif text-base md:text-lg text-foreground">Estamos para ayudarte con tu próxima campaña</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 mb-10">
@@ -47,7 +47,7 @@ export function Contact() {
                 value={formData.nombre}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 bg-[#F6EFE6] border-2 border-[#8B1E24] rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-[#8B1E24] text-[#333333] placeholder:text-[#8B1E24]/50"
+                className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50"
               />
             </div>
             <div>
@@ -57,7 +57,7 @@ export function Contact() {
                 placeholder="Empresa"
                 value={formData.empresa}
                 onChange={handleChange}
-                className="w-full px-6 py-4 bg-[#F6EFE6] border-2 border-[#8B1E24] rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-[#8B1E24] text-[#333333] placeholder:text-[#8B1E24]/50"
+                className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50"
               />
             </div>
           </div>
@@ -71,7 +71,7 @@ export function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 bg-[#F6EFE6] border-2 border-[#8B1E24] rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-[#8B1E24] text-[#333333] placeholder:text-[#8B1E24]/50"
+                className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50"
               />
             </div>
             <div>
@@ -81,7 +81,7 @@ export function Contact() {
                 placeholder="Teléfono"
                 value={formData.telefono}
                 onChange={handleChange}
-                className="w-full px-6 py-4 bg-[#F6EFE6] border-2 border-[#8B1E24] rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-[#8B1E24] text-[#333333] placeholder:text-[#8B1E24]/50"
+                className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50"
               />
             </div>
           </div>
@@ -94,14 +94,14 @@ export function Contact() {
               onChange={handleChange}
               required
               rows={6}
-              className="w-full px-6 py-4 bg-[#F6EFE6] border-2 border-[#8B1E24] rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-[#8B1E24] text-[#333333] placeholder:text-[#8B1E24]/50 resize-none"
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50 resize-none"
             />
           </div>
 
           <div className="text-center">
             <button
               type="submit"
-              className="bg-[#8B1E24] text-white font-sans text-base px-12 py-4 rounded-lg hover:bg-[#6d1619] transition-colors shadow-lg"
+              className="bg-primary text-white font-sans text-base px-12 py-4 rounded-lg hover:bg-primary-hover transition-colors shadow-lg"
             >
               Enviar
             </button>
@@ -109,19 +109,19 @@ export function Contact() {
         </form>
 
         <div className="flex justify-center gap-6">
-          <a href="#" className="text-[#8B1E24] hover:opacity-80 transition-opacity">
+          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
             <Facebook size={24} />
           </a>
-          <a href="#" className="text-[#8B1E24] hover:opacity-80 transition-opacity">
+          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
             <Instagram size={24} />
           </a>
-          <a href="#" className="text-[#8B1E24] hover:opacity-80 transition-opacity">
+          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
             <Linkedin size={24} />
           </a>
-          <a href="#" className="text-[#8B1E24] hover:opacity-80 transition-opacity">
+          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
             <Mail size={24} />
           </a>
-          <a href="#" className="text-[#8B1E24] hover:opacity-80 transition-opacity">
+          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
             <Phone size={24} />
           </a>
         </div>

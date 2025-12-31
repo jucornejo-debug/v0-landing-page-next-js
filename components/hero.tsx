@@ -32,7 +32,7 @@ export function Hero() {
 
         <Link
           href="/soportes"
-          className="inline-block bg-[#8B1E24] text-white font-sans text-base md:text-lg px-12 py-4 rounded-lg hover:bg-[#6d1619] transition-colors shadow-lg"
+          className="inline-block bg-primary text-white font-sans text-base md:text-lg px-12 py-4 rounded-lg hover:bg-primary-hover transition-colors shadow-lg"
         >
           Ver soportes
         </Link>

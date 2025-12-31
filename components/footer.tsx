@@ -18,7 +18,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-[#8B1E24] text-white py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div>

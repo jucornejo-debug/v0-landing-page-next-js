@@ -5,9 +5,9 @@
 
 :root {
   /* Updated color palette to match burgundy and cream theme */
-  --burgundy: #8b1e24;
-  --cream: #f6efe6;
-  --dark-gray: #333333;
+  --burgundy: rgb(139, 30, 36);
+  --cream: rgb(246, 239, 230);
+  --dark-gray: rgb(51, 51, 51);
 
   --background: var(--cream);
   --foreground: var(--burgundy);
@@ -33,7 +33,7 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+  --radius: 10px;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -42,6 +42,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  /* Adding dark-text token for text content */
+  --dark-text: var(--dark-gray);
+  /* Adding primary-hover for hover states */
+  --primary-hover: #6d1619;
 }
 
 .dark {
@@ -119,6 +123,10 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  /* Adding dark-text token to theme */
+  --color-dark-text: var(--dark-text);
+  /* Adding primary-hover token to theme */
+  --color-primary-hover: var(--primary-hover);
 }
 
 @layer base {
