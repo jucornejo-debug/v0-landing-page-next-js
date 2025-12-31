@@ -29,9 +29,9 @@ export function SupportsFull() {
       images: ["/construction-fence-advertising.jpg", "/perimeter-fence-billboard.jpg"],
     },
     {
-      title: "VALLADOS",
+      title: "HIPER VALLADOS",
       location: "Eventos especiales",
-      images: ["/perimeter-fence-billboard.jpg", "/special-construction-barrier-ads.jpg"],
+      images: ["/Hiper-Vallado 2.jpg", "/Hiper Vallado 5.jpg"],
     },
     {
       title: "VALLADOS DOBLE",
