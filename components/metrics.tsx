@@ -1,6 +1,6 @@
 export function Metrics() {
   return (
-    <section className="bg-background py-16 md:py-20 rounded-t-[3rem] -mt-12 relative z-20">
+    <section className="bg-background py-16 md:py-10 rounded-t-[3rem] -mt-12 relative z-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-32">
           {/* Metric 1 */}
