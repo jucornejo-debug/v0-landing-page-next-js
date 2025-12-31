@@ -22,7 +22,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div>
-            <Image src="/Diseño sin título (2).png" alt="Logo" width={144} height={48} className="h-10 w-auto" />
+            <Image src="/Diseño sin título (2).png" alt="Logo" width={288} height={96} className="h-10 w-auto" />
           </div>
 
           <div>
