@@ -76,10 +76,10 @@ export function SupportsFull() {
                 Conocé más
               </button>
             </div>
-            <div className="flex justify-center md:justify-end">
+            <div className="flex justify-center">
               <div className="rounded-3xl overflow-hidden shadow-2xl max-w-md w-full">
                 <Image
-                  src="/images/image.png"
+                  src="/GRAN FORMATO E-S.jpg"
                   alt="Soporte publicitario"
                   width={500}
                   height={400}
