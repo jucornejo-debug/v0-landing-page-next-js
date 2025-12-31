@@ -27,11 +27,10 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0">
-            <Image src="/Logo Página Web.png" alt="Logo" width={180} height={60} className="h-8 w-auto" />
+            <Image src="/Logo Página Web.png" alt="Logo" width={240} height={80} className="h-12 w-auto" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-12 ml-auto mr-8">
             <button
               onClick={() => scrollToSection("nosotros")}
               className="font-sans text-sm hover:opacity-80 transition-opacity"
