@@ -10,7 +10,7 @@ export function Hero() {
           className="w-[50%] h-[50%] bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(/placeholder.svg?height=1080&width=1920&query=outdoor+billboard+advertising+city+skyline)",
+              "url(/Hipervallado 4.jpg?height=1080&width=1920&query=outdoor+billboard+advertising+city+skyline)",
           }}
         />
       </div>
