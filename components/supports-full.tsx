@@ -62,7 +62,7 @@ export function SupportsFull() {
     <section id="soportes" className="bg-background">
       <div className="bg-primary w-full">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 items-center gap-8 py-12 md:py-16">
+          <div className="grid md:grid-cols-2 items-center gap-4 py-12 md:py-16">
             <div className="text-left pl-6 md:pl-16 lg:pl-24">
               <h2 className="font-sans font-bold text-3xl md:text-5xl lg:text-6xl text-white uppercase mb-4 md:mb-6 tracking-tight leading-tight">
                 NUESTROS
