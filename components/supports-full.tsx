@@ -34,9 +34,9 @@ export function SupportsFull() {
       images: ["/perimeter-fence-billboard.jpg", "/special-construction-barrier-ads.jpg"],
     },
     {
-      title: "VALLADOS",
-      location: "Zonas urbanas",
-      images: ["/special-construction-barrier-ads.jpg", "/construction-fence-advertising.jpg"],
+      title: "VALLADOS DOBLE",
+      location: "Centro",
+      images: ["/Sextuple doble 1_1200x900.jpg", "/Sextuple doble_1200x900.jpg"],
     },
   ]
 
