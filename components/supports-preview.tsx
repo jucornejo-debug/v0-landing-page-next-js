@@ -39,7 +39,7 @@ export function SupportsPreview() {
             <div key={index} className="rounded-3xl overflow-hidden shadow-lg bg-background">
               <div className="aspect-[4/3] overflow-hidden">
                 <Image
-                  src={support.image || "/placeholder.svg"}
+                  src={support.image || "/GRAN FORMATO E-S.jpg"}
                   alt={support.title}
                   width={400}
                   height={300}
