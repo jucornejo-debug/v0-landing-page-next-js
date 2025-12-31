@@ -26,7 +26,7 @@ export function SupportsFull() {
     {
       title: "VALLADOS",
       location: "Obras en construcción",
-      images: ["/construction-fence-advertising.jpg", "/perimeter-fence-billboard.jpg"],
+      images: ["/Vallado 2.jpg", "/Vallado 3-jpg"],
     },
     {
       title: "HIPER VALLADOS",
