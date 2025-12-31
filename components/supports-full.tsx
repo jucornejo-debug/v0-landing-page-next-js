@@ -1,45 +1,87 @@
+"use client"
+
 import Image from "next/image"
+import { useState } from "react"
 
 export function SupportsFull() {
   const grandesFormatos = [
-    { title: "Medianera Premium", location: "Av. 9 de Julio - CABA", image: "/large-building-wall-billboard.jpg" },
-    { title: "Cartelera Gigante", location: "Panamericana Km 32", image: "/giant-highway-billboard.jpg" },
-    { title: "Prisma Vial", location: "Acceso Oeste - Morón", image: "/highway-prism-billboard.jpg" },
+    {
+      title: "GRANDES FORMATOS",
+      location: "Ingreso/Salida ciudad",
+      images: ["/images/image.png", "/large-building-wall-billboard.jpg"],
+    },
+    {
+      title: "GRANDES FORMATOS",
+      location: "Centro de la ciudad",
+      images: ["/images/image.png", "/giant-highway-billboard.jpg"],
+    },
+    {
+      title: "GRANDES FORMATOS",
+      location: "Variado",
+      images: ["/images/image.png", "/highway-prism-billboard.jpg"],
+    },
   ]
 
   const vallados = [
-    { title: "Vallado Obra", location: "Puerto Madero - CABA", image: "/construction-fence-advertising.jpg" },
-    { title: "Cerco Perimetral", location: "Av. del Libertador", image: "/perimeter-fence-billboard.jpg" },
-    { title: "Vallado Especial", location: "Palermo - CABA", image: "/special-construction-barrier-ads.jpg" },
+    {
+      title: "VALLADOS",
+      location: "Obras en construcción",
+      images: ["/construction-fence-advertising.jpg", "/perimeter-fence-billboard.jpg"],
+    },
+    {
+      title: "VALLADOS",
+      location: "Eventos especiales",
+      images: ["/perimeter-fence-billboard.jpg", "/special-construction-barrier-ads.jpg"],
+    },
+    {
+      title: "VALLADOS",
+      location: "Zonas urbanas",
+      images: ["/special-construction-barrier-ads.jpg", "/construction-fence-advertising.jpg"],
+    },
   ]
 
   const digitales = [
-    { title: "Pantalla LED XL", location: "Obelisco - CABA", image: "/large-led-screen-outdoor-advertising.jpg" },
-    { title: "Display Digital", location: "Av. Corrientes", image: "/digital-display-outdoor-billboard.jpg" },
-    { title: "Totem LED", location: "Shopping Unicenter", image: "/led-totem-digital-advertising.jpg" },
+    {
+      title: "DIGITALES",
+      location: "Centros comerciales",
+      images: ["/large-led-screen-outdoor-advertising.jpg", "/digital-display-outdoor-billboard.jpg"],
+    },
+    {
+      title: "DIGITALES",
+      location: "Vía pública",
+      images: ["/digital-display-outdoor-billboard.jpg", "/led-totem-digital-advertising.jpg"],
+    },
+    {
+      title: "DIGITALES",
+      location: "Shopping centers",
+      images: ["/led-totem-digital-advertising.jpg", "/large-led-screen-outdoor-advertising.jpg"],
+    },
   ]
 
   return (
-    <section id="soportes" className="bg-[#F6EFE6] py-20">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-center mb-20">
-          <div className="bg-[#8B1E24] rounded-3xl overflow-hidden max-w-3xl w-full">
-            <div className="grid md:grid-cols-2 items-center">
-              <div className="p-8 md:p-12">
-                <h2 className="font-sans font-bold text-2xl md:text-3xl lg:text-4xl text-white uppercase mb-6 tracking-tight">
-                  TODOS NUESTROS
-                  <br />
-                  SOPORTES
-                </h2>
-                <button className="bg-white text-[#8B1E24] font-sans text-base px-10 py-4 rounded-lg hover:bg-gray-100 transition-colors">
-                  Conocé más
-                </button>
-              </div>
-              <div className="h-64 md:h-full min-h-[300px]">
+    <section id="soportes" className="bg-[#F6EFE6]">
+      <div className="bg-[#8B1E24] w-full">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 items-center gap-8 py-12 md:py-16">
+            <div className="text-left">
+              <h2 className="font-sans font-bold text-3xl md:text-5xl lg:text-6xl text-white uppercase mb-4 md:mb-6 tracking-tight leading-tight">
+                NUESTROS
+                <br />
+                SOPORTES
+              </h2>
+              <p className="font-serif text-base md:text-lg text-white mb-6 md:mb-8">
+                Soportes de alto impacto diseñados para que tu marca se vea, se recuerde y se destaque en la calle.
+              </p>
+              <button className="bg-[#F6EFE6] text-[#8B1E24] font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-white transition-colors">
+                Conocé más
+              </button>
+            </div>
+            <div className="flex justify-center md:justify-end">
+              <div className="rounded-3xl overflow-hidden shadow-2xl max-w-md w-full">
                 <Image
-                  src="/outdoor-advertising-portfolio-showcase.jpg"
-                  alt="Soportes"
-                  width={600}
+                  src="/images/image.png"
+                  alt="Soporte publicitario"
+                  width={500}
                   height={400}
                   className="w-full h-full object-cover"
                 />
@@ -47,91 +89,111 @@ export function SupportsFull() {
             </div>
           </div>
         </div>
+      </div>
 
+      <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Grandes Formatos */}
-        <div className="mb-20">
-          <h3 className="font-sans font-bold text-2xl md:text-3xl text-[#8B1E24] uppercase mb-10 tracking-tight">
+        <div className="mb-16">
+          <h3 className="font-sans font-bold text-2xl md:text-4xl text-[#8B1E24] uppercase mb-8 tracking-tight text-center">
             GRANDES FORMATOS
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
             {grandesFormatos.map((item, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg max-w-xs w-full">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h4 className="font-sans font-bold text-base text-[#8B1E24] uppercase mb-2 tracking-tight">
-                    {item.title}
-                  </h4>
-                  <p className="font-serif text-sm text-[#333333]">{item.location}</p>
-                </div>
-              </div>
+              <SupportCard key={index} item={item} />
             ))}
           </div>
         </div>
 
         {/* Vallados */}
-        <div className="mb-20">
-          <h3 className="font-sans font-bold text-2xl md:text-3xl text-[#8B1E24] uppercase mb-10 tracking-tight">
+        <div className="mb-16">
+          <h3 className="font-sans font-bold text-2xl md:text-4xl text-[#8B1E24] uppercase mb-8 tracking-tight text-center">
             VALLADOS
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
             {vallados.map((item, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg max-w-xs w-full">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h4 className="font-sans font-bold text-base text-[#8B1E24] uppercase mb-2 tracking-tight">
-                    {item.title}
-                  </h4>
-                  <p className="font-serif text-sm text-[#333333]">{item.location}</p>
-                </div>
-              </div>
+              <SupportCard key={index} item={item} />
             ))}
           </div>
         </div>
 
         {/* Formatos Digitales */}
         <div>
-          <h3 className="font-sans font-bold text-2xl md:text-3xl text-[#8B1E24] uppercase mb-10 tracking-tight">
-            FORMATOS DIGITALES
+          <h3 className="font-sans font-bold text-2xl md:text-4xl text-[#8B1E24] uppercase mb-8 tracking-tight text-center">
+            DIGITALES
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
             {digitales.map((item, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg max-w-xs w-full">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h4 className="font-sans font-bold text-base text-[#8B1E24] uppercase mb-2 tracking-tight">
-                    {item.title}
-                  </h4>
-                  <p className="font-serif text-sm text-[#333333]">{item.location}</p>
-                </div>
-              </div>
+              <SupportCard key={index} item={item} />
             ))}
           </div>
         </div>
       </div>
     </section>
+  )
+}
+
+function SupportCard({ item }: { item: { title: string; location: string; images: string[] } }) {
+  const [currentImage, setCurrentImage] = useState(0)
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % item.images.length)
+  }
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + item.images.length) % item.images.length)
+  }
+
+  return (
+    <div className="w-full max-w-[280px]">
+      <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg bg-white mb-4 group">
+        <Image
+          src={item.images[currentImage] || "/placeholder.svg"}
+          alt={item.title}
+          width={280}
+          height={280}
+          className="w-full h-full object-cover"
+        />
+        {item.images.length > 1 && (
+          <>
+            <button
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#8B1E24] w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#8B1E24] w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              aria-label="Next image"
+            >
+              ›
+            </button>
+          </>
+        )}
+      </div>
+
+      <div className="text-center">
+        <h4 className="font-sans font-bold text-lg md:text-xl text-[#8B1E24] uppercase mb-1 tracking-tight">
+          {item.title}
+        </h4>
+        <p className="font-serif text-sm md:text-base text-[#8B1E24]">//Ubicación: {item.location}</p>
+      </div>
+
+      {item.images.length > 1 && (
+        <div className="flex justify-center gap-1.5 mt-3">
+          {item.images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImage(index)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentImage ? "bg-[#8B1E24]" : "bg-gray-300"
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
