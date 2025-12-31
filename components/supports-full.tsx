@@ -13,7 +13,7 @@ export function SupportsFull() {
     {
       title: "GRANDES FORMATOS",
       location: "Centro de la ciudad",
-      images: ["/Gran Formato Centro 4.jpg", "/Gran Formato Centro 3.jpg"],
+      images: ["/Gran Formato Centro 4.jpg", "/Gran Formato centro 3.jpg"],
     },
     {
       title: "GRANDES FORMATOS",
@@ -36,7 +36,7 @@ export function SupportsFull() {
     {
       title: "VALLADOS DOBLE",
       location: "Centro",
-      images: ["/Sextuple doble 1_1200x900.jpg", "/Sextuple doble_1200x900.jpg"],
+      images: ["/Sextuple doble 1_1200x900.jpg", "/Sextuple doble_1200x900.jp"],
     },
   ]
 
