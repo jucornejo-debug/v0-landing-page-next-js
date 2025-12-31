@@ -30,7 +30,7 @@ export function About() {
           <div className="flex justify-center">
             <div className="rounded-2xl overflow-hidden shadow-xl max-w-md w-full">
               <Image
-                src="/professional-outdoor-advertising-team.jpg"
+                src="/Gran Formato Centro 2.jpg"
                 alt="Nuestro equipo"
                 width={800}
                 height={600}
