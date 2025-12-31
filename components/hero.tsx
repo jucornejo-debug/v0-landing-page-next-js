@@ -10,7 +10,7 @@ export function Hero() {
           className="w-[50%] h-[50%] bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(/Hipervallado 4.jpg)",
+              src="/Hipervallado 4.jpg",
           }}
         />
       </div>
