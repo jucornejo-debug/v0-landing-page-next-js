@@ -13,12 +13,12 @@ export function SupportsFull() {
     {
       title: "GRANDES FORMATOS",
       location: "Centro de la ciudad",
-      images: ["/images/image.png", "/giant-highway-billboard.jpg"],
+      images: ["/Gran Formato Centro 4.jpg", "/Gran Formato Centro 3.jpg"],
     },
     {
       title: "GRANDES FORMATOS",
       location: "Variado",
-      images: ["/images/image.png", "/highway-prism-billboard.jpg"],
+      images: ["/Gran Formato Centro 2.jpg", "/highway-prism-billboard.jpg"],
     },
   ]
 
