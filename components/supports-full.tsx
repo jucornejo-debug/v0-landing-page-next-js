@@ -44,7 +44,7 @@ export function SupportsFull() {
     {
       title: "DIGITALES",
       location: "Centros comerciales",
-      images: ["/large-led-screen-outdoor-advertising.jpg", "/digital-display-outdoor-billboard.jpg"],
+      images: ["/Super (principal).jpeg", "/LED Libertad.jpg"],
     },
     {
       title: "DIGITALES",
