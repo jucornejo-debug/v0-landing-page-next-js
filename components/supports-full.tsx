@@ -8,7 +8,7 @@ export function SupportsFull() {
     {
       title: "GRANDES FORMATOS",
       location: "Ingreso/Salida ciudad",
-      images: ["/images/image.png", "/large-building-wall-billboard.jpg"],
+      images: ["/Publicación 5_1200x900.jpg", "/Publicación 6_1200x900.jpg"],
     },
     {
       title: "GRANDES FORMATOS",
