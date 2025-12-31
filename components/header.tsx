@@ -27,7 +27,7 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0">
-            <Image src="/advertising-company-logo.jpg" alt="Logo" width={120} height={40} className="h-8 w-auto" />
+            <Image src="/Logo Nuevo PW.png" alt="Logo" width={120} height={40} className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
