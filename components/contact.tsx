@@ -110,12 +110,6 @@ export function Contact() {
 
         <div className="flex justify-center gap-6">
           <a href="#" className="text-primary hover:opacity-80 transition-opacity">
-            <Facebook size={24} />
-          </a>
-          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
-            <Instagram size={24} />
-          </a>
-          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
             <Linkedin size={24} />
           </a>
           <a href="#" className="text-primary hover:opacity-80 transition-opacity">
