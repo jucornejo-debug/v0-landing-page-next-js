@@ -8,7 +8,7 @@ export function SupportsPreview() {
     {
       title: "GRANDES FORMATOS",
       description: "Carteles de gran formato en rutas y avenidas de alta visibilidad.",
-      image: "/images/image.png",
+      image: "/Gran Formato Acceso a ciudad 5.jpg",
     },
     {
       title: "VALLADOS",
