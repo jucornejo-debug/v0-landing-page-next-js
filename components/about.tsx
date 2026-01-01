@@ -6,7 +6,7 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Text */}
-          <div>
+          <div className="pl-6 md:pl-12">
             <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary uppercase mb-8 tracking-tight">
               QUIENES SOMOS
             </h2>
