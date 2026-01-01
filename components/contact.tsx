@@ -75,7 +75,7 @@ export function Contact() {
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50"
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50 font-sans"
             />
 
             <input
@@ -84,7 +84,7 @@ export function Contact() {
               placeholder="Empresa"
               value={formData.empresa}
               onChange={handleChange}
-              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50"
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50 font-sans"
             />
           </div>
 
@@ -96,7 +96,7 @@ export function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50"
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50 font-sans"
             />
 
             <input
@@ -105,7 +105,7 @@ export function Contact() {
               placeholder="Teléfono"
               value={formData.telefono}
               onChange={handleChange}
-              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50"
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50 font-sans"
             />
           </div>
 
@@ -116,7 +116,7 @@ export function Contact() {
             onChange={handleChange}
             required
             rows={6}
-            className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50 resize-none"
+            className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50 resize-none font-sans"
           />
 
           <div className="text-center">

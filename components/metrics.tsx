@@ -5,7 +5,7 @@ export function Metrics() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-32">
           {/* Metric 1 */}
           <div className="text-center">
-            <div className="font-sans font-bold text-4xl text-primary mb-4 uppercase tracking-tight md:text-6xl">
+            <div className="font-sans font-bold text-4xl text-primary uppercase tracking-tight md:text-6xl mb-1.5">
               +25 AÑOS
             </div>
             <p className="text-base md:text-lg text-foreground font-sans">De experiencia en el mercado</p>
@@ -13,7 +13,7 @@ export function Metrics() {
 
           {/* Metric 2 */}
           <div className="text-center">
-            <div className="font-sans font-bold text-4xl text-primary mb-4 uppercase tracking-tight md:text-6xl">
+            <div className="font-sans font-bold text-4xl text-primary uppercase tracking-tight md:text-6xl mb-1.5">
               +300
             </div>
             <p className="text-base md:text-lg text-foreground font-sans">Soportes publicitarios disponibles</p>
