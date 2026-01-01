@@ -69,7 +69,7 @@ export function Footer() {
               </a>
             </p>
 
-            <p>
+            <p className="font-sans">
               Teléfono:{" "}
               <a
                 href="https://wa.me/543875193941?text=Hola%20NOA%20Publicidad%2C%20quiero%20hacer%20una%20consulta."

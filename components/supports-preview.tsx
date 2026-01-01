@@ -29,7 +29,7 @@ export function SupportsPreview() {
           <h2 className="font-sans font-bold text-3xl md:text-5xl text-primary uppercase mb-3 tracking-tight">
             NUESTROS SOPORTES
           </h2>
-          <p className="font-serif text-base md:text-lg text-primary">
+          <p className="text-base md:text-lg text-primary font-sans">
             Una amplia variedad de formatos publicitarios para cada necesidad.
           </p>
         </div>
@@ -50,7 +50,7 @@ export function SupportsPreview() {
                 <h3 className="font-sans font-bold text-lg md:text-xl text-primary uppercase mb-2 tracking-tight">
                   {support.title}
                 </h3>
-                <p className="font-serif text-sm md:text-base leading-relaxed text-foreground bg-background">{support.description}</p>
+                <p className="text-sm md:text-base leading-relaxed text-foreground bg-background font-sans">{support.description}</p>
               </div>
             </div>
           ))}

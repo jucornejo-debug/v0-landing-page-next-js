@@ -7,7 +7,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Text */}
           <div className="pl-6 md:pl-12">
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary uppercase mb-8 tracking-tight">
+            <h2 className="font-sans font-bold text-3xl text-primary uppercase mb-8 tracking-tight md:text-5xl">
               QUIENES SOMOS
             </h2>
 
