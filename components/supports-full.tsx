@@ -95,7 +95,7 @@ export function SupportsFull() {
       <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Grandes Formatos */}
         <div className="mb-16">
-          <h3 className="font-sans font-bold text-3xl md:text-5xl text-primary uppercase mb-8 tracking-tight text-left">
+          <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-center text-6xl">
             GRANDES FORMATOS
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
@@ -107,7 +107,7 @@ export function SupportsFull() {
 
         {/* Vallados */}
         <div className="mb-16">
-          <h3 className="font-sans font-bold text-3xl md:text-5xl text-primary uppercase mb-8 tracking-tight text-left">
+          <h3 className="font-sans font-bold text-3xl text-primary uppercase mb-8 tracking-tight md:text-6xl text-center">
             VALLADOS
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
@@ -119,8 +119,8 @@ export function SupportsFull() {
 
         {/* Formatos Digitales */}
         <div className="mb-16">
-          <h3 className="font-sans font-bold text-3xl md:text-5xl text-primary uppercase mb-8 tracking-tight text-left">
-            DIGITALES
+          <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-6xl text-center">
+            FORMATOS DIGITALES
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
             {digitales.map((item, index) => (
