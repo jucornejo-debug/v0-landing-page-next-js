@@ -1,9 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
-import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react"
+import { Linkedin, Mail, Phone } from "lucide-react"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -14,17 +13,44 @@ export function Contact() {
     mensaje: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission here
-  }
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+    if (status !== "idle") setStatus("idle") // si el usuario vuelve a escribir, limpiamos el mensaje
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    setStatus("sending")
+
+    try {
+      const data = new FormData()
+      Object.entries(formData).forEach(([key, value]) => data.append(key, value))
+
+      const res = await fetch("https://formspree.io/f/xldvvopo", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      })
+
+      if (res.ok) {
+        setFormData({
+          nombre: "",
+          empresa: "",
+          email: "",
+          telefono: "",
+          mensaje: "",
+        })
+        setStatus("success")
+      } else {
+        setStatus("error")
+      }
+    } catch {
+      setStatus("error")
+    }
   }
 
   return (
@@ -34,7 +60,9 @@ export function Contact() {
           <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary uppercase mb-4 tracking-tight">
             CONTÁCTANOS
           </h2>
-          <p className="text-base md:text-lg text-foreground font-sans leading-8">Estamos para ayudarte con tu próxima campaña</p>
+          <p className="text-base md:text-lg text-foreground font-sans leading-8">
+            Estamos para ayudarte con tu próxima campaña
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 mb-10">
@@ -101,22 +129,65 @@ export function Contact() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-primary text-white font-sans text-base px-12 py-4 rounded-lg hover:bg-primary-hover transition-colors shadow-lg"
+              disabled={status === "sending"}
+              className="bg-primary text-white font-sans text-base px-12 py-4 rounded-lg hover:bg-primary-hover transition-colors shadow-lg disabled:opacity-60"
             >
-              Enviar
+              {status === "sending" ? "Enviando..." : "Enviar"}
             </button>
+
+            {status === "success" && (
+              <p className="mt-4 text-sm text-green-700">
+                Enviado ✅ Tu consulta se envió correctamente. Te vamos a contactar a la brevedad.
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="mt-4 text-sm text-red-700">
+                Error ❌ No se pudo enviar. Probá de nuevo en unos minutos.
+              </p>
+            )}
           </div>
         </form>
 
         <div className="flex justify-center gap-6">
-          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
+          {/* LinkedIn (cambiá por tu URL real) */}
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary hover:opacity-80 transition-opacity"
+            aria-label="LinkedIn"
+          >
             <Linkedin size={24} />
           </a>
-          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
+
+          {/* Mail */}
+          <a
+            href="mailto:carteles.noa@outlook.com"
+            className="text-primary hover:opacity-80 transition-opacity"
+            aria-label="Email"
+          >
             <Mail size={24} />
           </a>
-          <a href="#" className="text-primary hover:opacity-80 transition-opacity">
+
+          {/* Teléfono */}
+          <a
+            href="tel:+543875193941"
+            className="text-primary hover:opacity-80 transition-opacity"
+            aria-label="Teléfono"
+          >
             <Phone size={24} />
+          </a>
+
+          {/* WhatsApp (opcional: si preferís que el ícono Phone sea WhatsApp, lo cambiamos después) */}
+          <a
+            href="https://wa.me/543875193941?text=Hola%20NOA%20Publicidad%2C%20quiero%20hacer%20una%20consulta."
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary hover:opacity-80 transition-opacity"
+            aria-label="WhatsApp"
+          >
+            <span className="sr-only">WhatsApp</span>
           </a>
         </div>
       </div>
