@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { Linkedin, Mail, Phone } from "lucide-react"
+import { Linkedin, Mail, MessageCircle } from "lucide-react"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -18,12 +18,11 @@ export function Contact() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
-    if (status !== "idle") setStatus("idle") // si el usuario vuelve a escribir, limpiamos el mensaje
+    if (status !== "idle") setStatus("idle")
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
     setStatus("sending")
 
     try {
@@ -32,7 +31,9 @@ export function Contact() {
 
       const res = await fetch("https://formspree.io/f/xldvvopo", {
         method: "POST",
-        headers: { Accept: "application/json" },
+        headers: {
+          Accept: "application/json", // 🔴 CLAVE para que Formspree responda OK
+        },
         body: data,
       })
 
@@ -48,7 +49,7 @@ export function Contact() {
       } else {
         setStatus("error")
       }
-    } catch {
+    } catch (err) {
       setStatus("error")
     }
   }
@@ -67,64 +68,56 @@ export function Contact() {
 
         <form onSubmit={handleSubmit} className="space-y-6 mb-10">
           <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <input
-                type="text"
-                name="nombre"
-                placeholder="Nombre"
-                value={formData.nombre}
-                onChange={handleChange}
-                required
-                className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="empresa"
-                placeholder="Empresa"
-                value={formData.empresa}
-                onChange={handleChange}
-                className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50"
-              />
-            </div>
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Nombre"
+              value={formData.nombre}
+              onChange={handleChange}
+              required
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50"
+            />
+
+            <input
+              type="text"
+              name="empresa"
+              placeholder="Empresa"
+              value={formData.empresa}
+              onChange={handleChange}
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50"
-              />
-            </div>
-            <div>
-              <input
-                type="tel"
-                name="telefono"
-                placeholder="Teléfono"
-                value={formData.telefono}
-                onChange={handleChange}
-                className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50"
-              />
-            </div>
-          </div>
-
-          <div>
-            <textarea
-              name="mensaje"
-              placeholder="Mensaje"
-              value={formData.mensaje}
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
               onChange={handleChange}
               required
-              rows={6}
-              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary text-dark-text placeholder:text-primary/50 resize-none"
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50"
+            />
+
+            <input
+              type="tel"
+              name="telefono"
+              placeholder="Teléfono"
+              value={formData.telefono}
+              onChange={handleChange}
+              className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50"
             />
           </div>
+
+          <textarea
+            name="mensaje"
+            placeholder="Mensaje"
+            value={formData.mensaje}
+            onChange={handleChange}
+            required
+            rows={6}
+            className="w-full px-6 py-4 bg-background border-2 border-primary rounded-lg font-serif text-base focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-primary/50 resize-none"
+          />
 
           <div className="text-center">
             <button
@@ -137,57 +130,46 @@ export function Contact() {
 
             {status === "success" && (
               <p className="mt-4 text-sm text-green-700">
-                Enviado ✅ Tu consulta se envió correctamente. Te vamos a contactar a la brevedad.
+                ✅ Mensaje enviado correctamente. Te contactamos a la brevedad.
               </p>
             )}
 
             {status === "error" && (
               <p className="mt-4 text-sm text-red-700">
-                Error ❌ No se pudo enviar. Probá de nuevo en unos minutos.
+                ❌ Error al enviar. Intentá nuevamente en unos minutos.
               </p>
             )}
           </div>
         </form>
 
+        {/* ICONOS */}
         <div className="flex justify-center gap-6">
-          {/* LinkedIn (cambiá por tu URL real) */}
+          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/"
             target="_blank"
             rel="noreferrer"
             className="text-primary hover:opacity-80 transition-opacity"
-            aria-label="LinkedIn"
           >
             <Linkedin size={24} />
           </a>
 
-          {/* Mail */}
+          {/* Email */}
           <a
             href="mailto:carteles.noa@outlook.com"
             className="text-primary hover:opacity-80 transition-opacity"
-            aria-label="Email"
           >
             <Mail size={24} />
           </a>
 
-          {/* Teléfono */}
-          <a
-            href="tel:+543875193941"
-            className="text-primary hover:opacity-80 transition-opacity"
-            aria-label="Teléfono"
-          >
-            <Phone size={24} />
-          </a>
-
-          {/* WhatsApp (opcional: si preferís que el ícono Phone sea WhatsApp, lo cambiamos después) */}
+          {/* WhatsApp */}
           <a
             href="https://wa.me/543875193941?text=Hola%20NOA%20Publicidad%2C%20quiero%20hacer%20una%20consulta."
             target="_blank"
             rel="noreferrer"
             className="text-primary hover:opacity-80 transition-opacity"
-            aria-label="WhatsApp"
           >
-            <span className="sr-only">WhatsApp</span>
+            <MessageCircle size={24} />
           </a>
         </div>
       </div>
