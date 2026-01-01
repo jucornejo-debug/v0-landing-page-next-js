@@ -8,17 +8,17 @@ export function SupportsPreview() {
     {
       title: "GRANDES FORMATOS",
       description: "Carteles de gran formato en rutas y avenidas de alta visibilidad.",
-      image: "/Gran Formato Centro 4.jpg",
+      image: "/images/image.png",
     },
     {
       title: "VALLADOS",
       description: "Vallados publicitarios en zonas urbanas con alto tránsito.",
-      image: "/Sextuple doble_1200x900.jpg",
+      image: "/images/image.png",
     },
     {
       title: "DIGITALES",
       description: "Pantallas digitales en puntos estratégicos de gran circulación.",
-      image: "/Sextuple doble_1200x900.jpg",
+      image: "/images/image.png",
     },
   ]
 

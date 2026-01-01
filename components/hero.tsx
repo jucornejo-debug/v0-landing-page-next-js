@@ -29,7 +29,7 @@ export function Hero() {
           VÍA PÚBLICA
         </h1>
 
-        <p className="font-serif text-base md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-sans">
           Soluciones publicitarias de alto impacto para tu marca
         </p>
 

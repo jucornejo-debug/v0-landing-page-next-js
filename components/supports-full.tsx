@@ -70,7 +70,7 @@ export function SupportsFull() {
                 <br />
                 SOPORTES
               </h2>
-              <p className="font-serif text-base md:text-lg text-white mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-white mb-6 md:mb-8 font-sans">
                 Soportes de alto impacto diseñados para que tu marca se vea, se recuerde y se destaque en la calle.
               </p>
               <button className="bg-background text-primary font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-white transition-colors">

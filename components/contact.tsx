@@ -28,13 +28,13 @@ export function Contact() {
   }
 
   return (
-    <section id="contacto" className="bg-background py-10 md:py-32">
+    <section id="contacto" className="bg-background py-20 md:py-32">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-12">
           <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary uppercase mb-4 tracking-tight">
             CONTÁCTANOS
           </h2>
-          <p className="font-serif text-base md:text-lg text-foreground">Estamos para ayudarte con tu próxima campaña</p>
+          <p className="text-base md:text-lg text-foreground font-sans leading-8">Estamos para ayudarte con tu próxima campaña</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 mb-10">
