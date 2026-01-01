@@ -22,7 +22,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div>
-            <Image src="/Logo Página Web.png" alt="Logo" width={360} height={120} className="h-16 w-auto" />
+            <Image src="/Logo Página Web.png" alt="Logo" width={360} height={120} className="w-auto font-sans h-auto" />
           </div>
 
           <div>
@@ -49,9 +49,9 @@ export function Footer() {
           </div>
 
           <div className="font-serif text-sm">
-            <p className="mb-2">📧 info@publicidadvp.com</p>
-            <p className="mb-2">📞 +54 11 1234-5678</p>
-            <p>📍 Buenos Aires, Argentina</p>
+            <p className="mb-2 font-sans"> Mail: info@publicidadvp.com</p>
+            <p className="mb-2"> Teléfono: +54 11 1234-5678</p>
+            <p className="font-sans">📍 Salta, Argentina</p>
           </div>
         </div>
 
