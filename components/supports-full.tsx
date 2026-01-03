@@ -192,7 +192,7 @@ function SupportCard({ item }: { item: { title: string; location: string; images
         <h4 className="font-sans font-bold text-lg md:text-xl text-primary uppercase mb-1 tracking-tight">
           {item.title}
         </h4>
-        <p className="text-sm md:text-base text-primary font-sans">//Ubicación: {item.location}</p>
+        <p className="text-sm md:text-base text-primary font-sans">Tipo: {item.location}</p>
       </div>
 
       {item.images.length > 1 && (
