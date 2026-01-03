@@ -9,12 +9,12 @@ export function SupportsFull() {
     {
       title: "GRANDES FORMATOS",
       location: "Ingreso/Salida ciudad",
-      images: ["/Publicación 5_1200x900.jpg", "/Publicación 6_1200x900.jpg"],
+      images: ["/IngresoCiudad1.JPG", "/Publicación 6_1200x900.jpg"],
     },
     {
       title: "GRANDES FORMATOS",
       location: "Centro de la ciudad",
-      images: ["/Gran Formato Centro 4.jpg", "/Gran Formato centro 3.jpg"],
+      images: ["/Gran Formato Centro 4.jpg", "/GraformatoCentro.JPG"],
     },
     {
       title: "GRANDES FORMATOS",
