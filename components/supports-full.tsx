@@ -27,7 +27,7 @@ export function SupportsFull() {
     {
       title: "VALLADOS",
       location: "Simple",
-      images: ["/Vallado 2.jpg", "/Vallado 3-jpg"],
+      images: ["/Valladosimple.jpg", "/Valladosimple1.jpg"],
     },
     {
       title: "HIPER VALLADOS",
@@ -37,7 +37,7 @@ export function SupportsFull() {
     {
       title: "VALLADOS DOBLE",
       location: "Vallado Doble",
-      images: ["/Sextuple doble 1_1200x900.jpg", "/Sextuple doble_1200x900.jp"],
+      images: ["/ValladoDoble.jpg", "/valladoDoble1.jp"],
     },
   ]
 
