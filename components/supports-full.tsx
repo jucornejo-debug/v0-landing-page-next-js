@@ -32,7 +32,7 @@ export function SupportsFull() {
     {
       title: "HIPER VALLADOS",
       location: "Hiper Vallado",
-      images: ["/HiperVallado1.jpeg", "/HiperVallado2.jpeg"],
+      images: ["/HiperVallado2.jpeg", "/HiperVallado1.jpeg"],
     },
     {
       title: "VALLADOS DOBLE",
