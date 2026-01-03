@@ -37,7 +37,7 @@ export function SupportsFull() {
     {
       title: "VALLADOS DOBLE",
       location: "Vallado Doble",
-      images: ["/ValladoDoble.jpg", "/valladoDoble1.jp"],
+      images: ["/ValladoDoble.JPG", "/ValladoDoble1.JPG"],
     },
   ]
 
@@ -50,12 +50,12 @@ export function SupportsFull() {
     {
       title: "FORMATOS DIGITAL",
       location: "centro Comercial",
-      images: ["/digital-display-outdoor-billboard.jpg", "/led-totem-digital-advertising.jpg"],
+      images: ["/Montaje3.jpeg", "/Montaje4.jpeg"],
     },
     {
       title: "FORMATO DIGITAL",
       location: "Shopping",
-      images: ["/led-totem-digital-advertising.jpg", "/large-led-screen-outdoor-advertising.jpg"],
+      images: ["/Montaje2.jpeg", "/large-led-screen-outdoor-advertising.jpg"],
     },
   ]
 
