@@ -26,35 +26,35 @@ export function SupportsFull() {
   const vallados = [
     {
       title: "VALLADOS",
-      location: "Obras en construcción",
+      location: "Simple",
       images: ["/Vallado 2.jpg", "/Vallado 3-jpg"],
     },
     {
       title: "HIPER VALLADOS",
-      location: "Eventos especiales",
+      location: "Hiper Vallado",
       images: ["/Hiper-Vallado 2.jpg", "/Hiper Vallado 5.jpg"],
     },
     {
       title: "VALLADOS DOBLE",
-      location: "Centro",
+      location: "Vallado Doble",
       images: ["/Sextuple doble 1_1200x900.jpg", "/Sextuple doble_1200x900.jp"],
     },
   ]
 
   const digitales = [
     {
-      title: "DIGITALES",
-      location: "Centros comerciales",
+      title: "FORMATO DIGITAL",
+      location: "Centro comercial",
       images: ["/Super (principal).jpeg", "/LED Libertad.jpg"],
     },
     {
-      title: "DIGITALES",
-      location: "Vía pública",
+      title: "FORMATOS DIGITAL",
+      location: "centro Comercial",
       images: ["/digital-display-outdoor-billboard.jpg", "/led-totem-digital-advertising.jpg"],
     },
     {
-      title: "DIGITALES",
-      location: "Shopping centers",
+      title: "FORMATO DIGITAL",
+      location: "Shopping",
       images: ["/led-totem-digital-advertising.jpg", "/large-led-screen-outdoor-advertising.jpg"],
     },
   ]
