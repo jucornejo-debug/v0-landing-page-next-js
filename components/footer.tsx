@@ -24,8 +24,8 @@ export function Footer() {
             <Image
               src="/Logo Blanco.png"
               alt="Logo"
-              width={360}
-              height={120}
+              width={420}
+              height={140}
               className="h-20 w-auto"
             />
           </div>
