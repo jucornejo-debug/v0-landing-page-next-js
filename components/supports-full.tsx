@@ -19,7 +19,7 @@ export function SupportsFull() {
     {
       title: "GRANDES FORMATOS",
       location: "Variado",
-      images: ["/Gran Formato Centro 2.jpg", "/highway-prism-billboard.jpg"],
+      images: ["/Gran Formato Centro 2.jpg", "/GRAN FORMATO E-S.jpg"],
     },
   ]
 
