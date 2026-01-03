@@ -27,7 +27,7 @@ export function SupportsFull() {
     {
       title: "VALLADOS",
       location: "Simple",
-      images: ["/Valladosimple.jpg", "/Valladosimple1.jpg"],
+      images: ["/Valladosimple.JPG", "/Valladosimple1.JPG"],
     },
     {
       title: "HIPER VALLADOS",
