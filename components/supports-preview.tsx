@@ -13,7 +13,7 @@ export function SupportsPreview() {
     {
       title: "VALLADOS",
       description: "Vallados publicitarios en zonas urbanas con alto tránsito.",
-      image: "/ValladoAltura.JPG",
+      image: "/ValladoAltura.jpg",
     },
     {
       title: "FORMATOS DIGITALES",
