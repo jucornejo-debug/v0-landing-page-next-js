@@ -9,12 +9,12 @@ export function SupportsFull() {
     {
       title: "GRANDES FORMATOS",
       location: "Ingreso/Salida ciudad",
-      images: ["/IngresoCiudad1.JPG", "/Publicación 6_1200x900.jpg"],
+      images: ["/IngresoCiudad1.jpg", "/Publicación 6_1200x900.jpg"],
     },
     {
       title: "GRANDES FORMATOS",
       location: "Centro de la ciudad",
-      images: ["/Gran Formato Centro 4.jpg", "/GraformatoCentro.JPG"],
+      images: ["/Gran Formato Centro 4.jpg", "/GraformatoCentro.jpg"],
     },
     {
       title: "GRANDES FORMATOS",
@@ -27,17 +27,17 @@ export function SupportsFull() {
     {
       title: "VALLADOS",
       location: "Simple",
-      images: ["/Valladosimple.JPG", "/Valladosimple1.JPG"],
+      images: ["/Valladosimple.jpg", "/Valladosimple1.jpg"],
     },
     {
       title: "HIPER VALLADOS",
       location: "Hiper Vallado",
-      images: ["/HiperVallado2.jpeg", "/HiperVallado3.JPG"],
+      images: ["/HiperVallado2.jpeg", "/HiperVallado3.jpg"],
     },
     {
       title: "VALLADOS DOBLE",
       location: "Vallado Doble",
-      images: ["/ValladoDoble.JPG", "/ValladoDoble1.JPG"],
+      images: ["/ValladoDoble.jpg", "/ValladoDoble1.jpg"],
     },
   ]
 
