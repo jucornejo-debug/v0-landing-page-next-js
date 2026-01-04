@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import type React from "react"
 import Image from "next/image"
 
 export function SupportsPreview() {
@@ -21,6 +21,14 @@ export function SupportsPreview() {
       image: "/LED Libertad.jpg",
     },
   ]
+
+  const handleScrollToSupports = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const supportsSection = document.getElementById("soportes-detalle")
+    if (supportsSection) {
+      supportsSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   return (
     <section className="bg-background py-12 md:py-16">
@@ -50,19 +58,22 @@ export function SupportsPreview() {
                 <h3 className="font-sans font-bold text-lg md:text-xl text-primary uppercase mb-2 tracking-tight">
                   {support.title}
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed text-foreground bg-background font-sans">{support.description}</p>
+                <p className="text-sm md:text-base leading-relaxed text-foreground bg-background font-sans">
+                  {support.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-center">
-          <Link
-            href="/soportes"
+          <a
+            href="#soportes-detalle"
+            onClick={handleScrollToSupports}
             className="inline-block bg-primary text-white font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors shadow-lg"
           >
             Ver todos los soportes
-          </Link>
+          </a>
         </div>
       </div>
     </section>
