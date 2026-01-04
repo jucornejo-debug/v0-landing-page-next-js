@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Poppins, Lora } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { WhatsAppButton } from "@/components/whatsapp-button"
 import "./globals.css"
 
 const poppins = Poppins({
@@ -47,6 +48,7 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body className={`${poppins.variable} ${lora.variable} font-serif antialiased`}>
         {children}
+        <WhatsAppButton />
         <Analytics />
       </body>
     </html>
