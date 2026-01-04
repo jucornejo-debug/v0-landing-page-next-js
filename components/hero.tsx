@@ -6,16 +6,9 @@ import Image from "next/image"
 export function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image
-          src="/Hipervallado 4.jpg"
-          alt="Hipervallado"
-          fill
-          priority
-          className="object-cover"
-        />
+        <Image src="/hipervallado-4.jpg" alt="Hipervallado" fill priority className="object-cover" />
       </div>
 
       {/* Dark Overlay */}

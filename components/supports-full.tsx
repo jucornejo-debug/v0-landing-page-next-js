@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import Image from "next/image"
 import { useState } from "react"
 import Link from "next/link"
@@ -9,17 +11,17 @@ export function SupportsFull() {
     {
       title: "GRANDES FORMATOS",
       location: "Ingreso/Salida ciudad",
-      images: ["/IngresoCiudad1.JPG", "/Publicación 6_1200x900.jpg"],
+      images: ["/IngresoCiudad1.JPG", "/publicacion-6.jpg"],
     },
     {
       title: "GRANDES FORMATOS",
       location: "Centro de la ciudad",
-      images: ["/Gran Formato Centro 4.jpg", "/GraformatoCentro.JPG"],
+      images: ["/gran-formato-centro-4.jpg", "/GraformatoCentro.JPG"],
     },
     {
       title: "GRANDES FORMATOS",
       location: "Variado",
-      images: ["/Gran Formato Centro 2.jpg", "/GRAN FORMATO E-S.jpg"],
+      images: ["/gran-formato-centro-2.jpg", "/gran-formato-es.jpg"],
     },
   ]
 
@@ -45,7 +47,7 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Centro comercial",
-      images: ["/Super (principal).jpeg", "/LED Libertad.jpg"],
+      images: ["/super-principal.jpeg", "/led-libertad.jpg"],
     },
     {
       title: "FORMATOS DIGITAL",
@@ -58,6 +60,14 @@ export function SupportsFull() {
       images: ["/Montaje2.jpeg", "/large-led-screen-outdoor-advertising.jpg"],
     },
   ]
+
+  const handleScrollToGrandesFormatos = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    const grandesFormatosSection = document.getElementById("grandes-formatos")
+    if (grandesFormatosSection) {
+      grandesFormatosSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
 
   return (
     <section id="soportes" className="bg-background">
@@ -73,14 +83,17 @@ export function SupportsFull() {
               <p className="text-base md:text-lg text-white mb-6 md:mb-8 font-sans">
                 Soportes de alto impacto diseñados para que tu marca se vea, se recuerde y se destaque en la calle.
               </p>
-              <button className="bg-background text-primary font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-white transition-colors">
+              <button
+                onClick={handleScrollToGrandesFormatos}
+                className="bg-background text-primary font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-white transition-colors"
+              >
                 Conocé más
               </button>
             </div>
             <div className="flex justify-center">
               <div className="rounded-3xl overflow-hidden shadow-2xl max-w-md w-full">
                 <Image
-                  src="/GRAN FORMATO E-S.jpg"
+                  src="/gran-formato-es.jpg"
                   alt="Soporte publicitario"
                   width={500}
                   height={400}
@@ -94,7 +107,7 @@ export function SupportsFull() {
 
       <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Grandes Formatos */}
-        <div className="mb-16">
+        <div id="grandes-formatos" className="mb-16">
           <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-center text-6xl">
             GRANDES FORMATOS
           </h3>
