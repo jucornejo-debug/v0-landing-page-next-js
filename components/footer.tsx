@@ -62,10 +62,10 @@ export function Footer() {
             <p className="font-sans">
               Mail:{" "}
               <a
-                href="mailto:carteles.noa@outlook.com"
+                href="mailto:contacto@dominio-visual.com"
                 className="hover:underline"
               >
-                carteles.noa@outlook.com
+                contacto@dominio-visual.com
               </a>
             </p>
 
