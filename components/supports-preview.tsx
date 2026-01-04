@@ -68,11 +68,10 @@ export function SupportsPreview() {
 
         <div className="text-center">
           <a
-            href="#soportes-detalle"
-            onClick={handleScrollToSupports}
+            href="/soportes#soportes-detalle"
             className="inline-block bg-primary text-white font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors shadow-lg"
           >
-            Ver todos los soportes
+            Ver soportes
           </a>
         </div>
       </div>
