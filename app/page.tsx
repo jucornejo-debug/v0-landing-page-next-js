@@ -14,9 +14,7 @@ export default function Page() {
       <Metrics />
       <About />
       <SupportsPreview />
-      <div id="soportes-detalle">
-        <Contact />
-      </div>
+      <Contact />
       <Footer />
     </main>
   )

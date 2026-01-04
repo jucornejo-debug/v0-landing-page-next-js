@@ -21,7 +21,13 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           {/* Logo */}
           <div>
-            <Image src="/logo-blanco.png" alt="Logo" width={420} height={140} className="h-20 w-auto" />
+            <Image
+              src="/Logo Blanco.png"
+              alt="Logo"
+              width={420}
+              height={140}
+              className="h-20 w-auto"
+            />
           </div>
 
           {/* Navegación */}
@@ -55,7 +61,10 @@ export function Footer() {
           <div className="font-serif text-sm space-y-2">
             <p className="font-sans">
               Mail:{" "}
-              <a href="mailto:carteles.noa@outlook.com" className="hover:underline">
+              <a
+                href="mailto:carteles.noa@outlook.com"
+                className="hover:underline"
+              >
                 carteles.noa@outlook.com
               </a>
             </p>
