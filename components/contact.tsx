@@ -146,7 +146,7 @@ export function Contact() {
         <div className="flex justify-center gap-6">
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/company/dominiovisual"
             target="_blank"
             rel="noreferrer"
             className="text-primary hover:opacity-80 transition-opacity"
