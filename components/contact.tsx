@@ -14,28 +14,42 @@ export function Contact() {
   })
 
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
+  const [errorMsg, setErrorMsg] = useState<string>("")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
     if (status !== "idle") setStatus("idle")
+    if (errorMsg) setErrorMsg("")
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus("sending")
+    setErrorMsg("")
 
     try {
-      const data = new FormData()
-      Object.entries(formData).forEach(([key, value]) => data.append(key, value))
+      const payload = {
+        ...formData,
+        // Formspree helpers:
+        _replyto: formData.email,
+        subject: `Consulta web - ${formData.nombre}${formData.empresa ? ` (${formData.empresa})` : ""}`,
+      }
 
       const res = await fetch("https://formspree.io/f/mqearaky", {
         method: "POST",
         headers: {
-          Accept: "application/json", // 🔴 CLAVE para que Formspree responda OK
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        body: data,
+        body: JSON.stringify(payload),
       })
+
+      // Intentamos leer JSON para obtener detalle si falla
+      let json: any = null
+      try {
+        json = await res.json()
+      } catch {}
 
       if (res.ok) {
         setFormData({
@@ -48,9 +62,16 @@ export function Contact() {
         setStatus("success")
       } else {
         setStatus("error")
+        // Mensaje útil si Formspree devuelve detalle
+        const msg =
+          json?.errors?.[0]?.message ||
+          json?.error ||
+          "Formspree rechazó el envío (revisá endpoint / activación del formulario)."
+        setErrorMsg(msg)
       }
-    } catch (err) {
+    } catch (err: any) {
       setStatus("error")
+      setErrorMsg("Error de red/CORS. Probá desde el sitio publicado (no desde localhost) y revisá Formspree.")
     }
   }
 
@@ -136,7 +157,7 @@ export function Contact() {
 
             {status === "error" && (
               <p className="mt-4 text-sm text-red-700">
-                ❌ Error al enviar. Intentá nuevamente en unos minutos.
+                ❌ Error al enviar. {errorMsg ? `(${errorMsg})` : "Intentá nuevamente en unos minutos."}
               </p>
             )}
           </div>
@@ -144,7 +165,6 @@ export function Contact() {
 
         {/* ICONOS */}
         <div className="flex justify-center gap-6">
-          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/company/dominiovisual"
             target="_blank"
@@ -154,20 +174,16 @@ export function Contact() {
             <Linkedin size={24} />
           </a>
 
-          {/* Email */}
-          <a
-            href="mailto:carteles.noa@outlook.com"
-            className="text-primary hover:opacity-80 transition-opacity"
-          >
+          <a href="mailto:carteles.noa@outlook.com" className="text-primary hover:opacity-80 transition-opacity">
             <Mail size={24} />
           </a>
 
-          {/* WhatsApp */}
           <a
             href="https://wa.me/543875193941?text=Hola%20NOA%20Publicidad%2C%20quiero%20hacer%20una%20consulta."
             target="_blank"
             rel="noreferrer"
             className="text-primary hover:opacity-80 transition-opacity"
+            aria-label="WhatsApp"
           >
             <MessageCircle size={24} />
           </a>
