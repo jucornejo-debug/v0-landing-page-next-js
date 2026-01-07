@@ -29,7 +29,7 @@ export function Contact() {
       const data = new FormData()
       Object.entries(formData).forEach(([key, value]) => data.append(key, value))
 
-      const res = await fetch("https://formspree.io/f/xldvvopo", {
+      const res = await fetch("https://formspree.io/f/mqearaky", {
         method: "POST",
         headers: {
           Accept: "application/json", // 🔴 CLAVE para que Formspree responda OK
