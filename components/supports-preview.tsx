@@ -18,7 +18,7 @@ export function SupportsPreview() {
     {
       title: "FORMATOS DIGITALES",
       description: "Pantallas digitales en puntos estratégicos de gran circulación.",
-      image: "/LED Libertad.jpg",
+      image: "/EsperandoPaginaWeb.jpeg",
     },
   ]
 
