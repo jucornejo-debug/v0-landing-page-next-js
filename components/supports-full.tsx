@@ -45,17 +45,17 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Centro comercial",
-      images: ["/Super (principal).jpeg", "/LED Libertad.jpg"],
+      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
     },
     {
       title: "FORMATOS DIGITAL",
       location: "centro Comercial",
-      images: ["/Montaje3.jpeg", "/Montaje4.jpeg"],
+      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
     },
     {
       title: "FORMATO DIGITAL",
       location: "Shopping",
-      images: ["/Montaje2.jpeg", "/large-led-screen-outdoor-advertising.jpg"],
+      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
     },
   ]
 
