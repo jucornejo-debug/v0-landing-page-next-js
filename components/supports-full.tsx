@@ -49,12 +49,12 @@ export function SupportsFull() {
     },
     {
       title: "FORMATOS DIGITAL",
-      location: "centro Comercial",
+      location: "Centro Comercial",
       images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
     },
     {
       title: "FORMATO DIGITAL",
-      location: "Shopping",
+      location: "Centro Comercial",
       images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
     },
   ]
