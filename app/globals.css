@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=League+Gothic&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -42,9 +44,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  /* Adding dark-text token for text content */
   --dark-text: var(--dark-gray);
-  /* Adding primary-hover for hover states */
   --primary-hover: #6d1619;
 }
 
@@ -84,9 +84,11 @@
 }
 
 @theme inline {
-  --font-sans: "var(--font-poppins)", "Poppins", sans-serif;
-  --font-serif: "var(--font-lora)", "Lora", serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "League Gothic", sans-serif;
+  --font-serif: "Inter", serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -123,9 +125,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  /* Adding dark-text token to theme */
   --color-dark-text: var(--dark-text);
-  /* Adding primary-hover token to theme */
   --color-primary-hover: var(--primary-hover);
 }
 
@@ -133,7 +133,15 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 }
