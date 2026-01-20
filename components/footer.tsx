@@ -72,12 +72,12 @@ export function Footer() {
             <p className="font-sans">
               Teléfono:{" "}
               <a
-                href="https://wa.me/543875193941?text=Hola%20NOA%20Publicidad%2C%20quiero%20hacer%20una%20consulta."
+                href="https://wa.me/543876022170?text=Hola%20NOA%20Publicidad%2C%20quiero%20hacer%20una%20consulta."
                 target="_blank"
                 rel="noreferrer"
                 className="hover:underline"
               >
-                +54 387 5193-941
+                +54 387 022-170
               </a>
             </p>
 
