@@ -95,6 +95,18 @@ export function SupportsFull() {
       </div>
 
       <div className="container mx-auto px-4 py-12 md:py-16">
+                {/* Formatos Digitales */}
+        <div className="mb-16">
+          <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-6xl text-center">
+            FORMATOS DIGITALES
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+            {digitales.map((item, index) => (
+              <SupportCard key={index} item={item} />
+            ))}
+          </div>
+        </div>
+
         {/* Grandes Formatos */}
         <div className="mb-16">
           <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-center text-6xl">
@@ -119,17 +131,6 @@ export function SupportsFull() {
           </div>
         </div>
 
-        {/* Formatos Digitales */}
-        <div className="mb-16">
-          <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-6xl text-center">
-            FORMATOS DIGITALES
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-            {digitales.map((item, index) => (
-              <SupportCard key={index} item={item} />
-            ))}
-          </div>
-        </div>
 
         <div className="flex justify-center mt-12">
           <Link
