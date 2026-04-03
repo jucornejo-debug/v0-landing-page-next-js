@@ -5,6 +5,24 @@ import { useState } from "react"
 import Link from "next/link"
 
 export function SupportsFull() {
+  
+    const digitales = [
+    {
+      title: "FORMATO DIGITAL",
+      location: "Centro comercial",
+      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
+    },
+    {
+      title: "FORMATOS DIGITAL",
+      location: "Centro Comercial",
+      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
+    },
+    {
+      title: "FORMATO DIGITAL",
+      location: "Gran Formato Vía Publica",
+      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
+    },
+  ]
   const grandesFormatos = [
     {
       title: "GRANDES FORMATOS",
@@ -41,23 +59,7 @@ export function SupportsFull() {
     },
   ]
 
-  const digitales = [
-    {
-      title: "FORMATO DIGITAL",
-      location: "Centro comercial",
-      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
-    },
-    {
-      title: "FORMATOS DIGITAL",
-      location: "Centro Comercial",
-      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
-    },
-    {
-      title: "FORMATO DIGITAL",
-      location: "Centro Comercial",
-      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
-    },
-  ]
+
 
   return (
     <section id="soportes" className="bg-background">
