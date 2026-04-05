@@ -9,12 +9,12 @@ export function SupportsFull() {
     const digitales = [
     {
       title: "FORMATO DIGITAL",
-      location: "Centro comercial",
+      location: "Centro comercial - San Lorenzo Chico",
       images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
     },
     {
       title: "FORMATOS DIGITAL",
-      location: "Centro Comercial",
+      location: "Galería Comercial - Centro Salta",
       images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
     },
     {
