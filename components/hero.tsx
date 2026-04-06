@@ -24,9 +24,9 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 className="font-sans font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight uppercase mb-6 md:mb-8">
-          IMPACTO VISUAL EN
+          Publicidad Exterior &
           <br />
-          VÍA PÚBLICA Y DOOH
+          DOOH
         </h1>
 
         <p className="text-base md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-sans">
