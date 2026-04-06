@@ -26,7 +26,7 @@ export function Hero() {
         <h1 className="font-sans font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight uppercase mb-6 md:mb-8">
           PUBLICIDAD EN
           <br />
-          VÍA PÚBLICA
+          VÍA PÚBLICA Y DOOH
         </h1>
 
         <p className="text-base md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-sans">
