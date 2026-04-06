@@ -10,17 +10,17 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Centro comercial - San Lorenzo Chico",
-      images: ["/public/images/Galería El Palacio.jpg", "/EsperandoPaginaWeb.jpeg"],
+      images: ["/Diseño sin título (6).jpg", "/EsperandoPaginaWeb.jpeg"],
     },
     {
       title: "FORMATOS DIGITAL",
       location: "Galería Comercial - Centro Salta",
-      images: ["/public/images/Galería El Palacio.jpg", "/EsperandoPaginaWeb.jpeg"],
+      images: ["/Galería El Palacio.jpg", "/EsperandoPaginaWeb.jpeg"],
     },
     {
       title: "FORMATO DIGITAL",
       location: "Gran Formato Vía Publica",
-      images: ["/public/images/Diseño sin título (6).jpg", "/EsperandoPaginaWeb.jpeg"],
+      images: ["/Diseño sin título (6).jpg", "/EsperandoPaginaWeb.jpeg"],
     },
   ]
   const grandesFormatos = [
