@@ -18,7 +18,7 @@ export function SupportsPreview() {
     {
       title: "FORMATOS DIGITALES",
       description: "Pantallas digitales en puntos estratégicos de gran circulación.",
-      image: "/public/images/Diseño sin título (6).jpg",
+      image: "/Diseño sin título (6).jpg",
     },
   ]
 
