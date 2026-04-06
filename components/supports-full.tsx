@@ -15,12 +15,12 @@ export function SupportsFull() {
     {
       title: "FORMATOS DIGITAL",
       location: "Galería Comercial - Centro Salta",
-      images: ["public/images/Galería El Palacio.jpg", "/EsperandoPaginaWeb.jpeg"],
+      images: ["/public/images/Galería El Palacio.jpg", "/EsperandoPaginaWeb.jpeg"],
     },
     {
       title: "FORMATO DIGITAL",
       location: "Gran Formato Vía Publica",
-      images: ["public/images/Diseño sin título (6).jpg", "/EsperandoPaginaWeb.jpeg"],
+      images: ["/public/images/Diseño sin título (6).jpg", "/EsperandoPaginaWeb.jpeg"],
     },
   ]
   const grandesFormatos = [
