@@ -20,7 +20,7 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Gran Formato Vía Publica",
-      images: ["/EsperandoPaginaWeb.jpeg", "/EsperandoPaginaWeb.jpeg"],
+      images: ["/Diseño sin título (6).jpg", "/EsperandoPaginaWeb.jpeg"],
     },
   ]
   const grandesFormatos = [
