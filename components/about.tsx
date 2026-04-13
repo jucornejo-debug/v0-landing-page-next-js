@@ -13,7 +13,7 @@ export function About() {
 
             <div className="space-y-2 font-serif text-base md:text-lg text-dark-text leading-relaxed">
               <p className="text-foreground font-sans">
-                Somos una empresa líder en publicidad exterior con más de 25 años de trayectoria en el mercado argentino.
+                Somos una empresa líder en publicidad exterior con más de 25 años de trayectoria en el mercado salteño.
               </p>
               <p className="text-foreground font-sans">
                 Contamos con una amplia red de soportes publicitarios estratégicamente ubicados en las principales ciudades y rutas del país.
