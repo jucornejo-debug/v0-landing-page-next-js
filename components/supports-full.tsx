@@ -10,7 +10,7 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Centro comercial - San Lorenzo Chico",
-      images: ["/El Punto.jpg", "/El Punto.jpg"],
+      images: ["/El Punto 1.jpg", "/El Punto 2.jpg"],
     },
     {
       title: "FORMATOS DIGITAL",
