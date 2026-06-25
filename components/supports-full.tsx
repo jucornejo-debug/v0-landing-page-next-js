@@ -15,7 +15,7 @@ export function SupportsFull() {
     {
       title: "FORMATOS DIGITAL",
       location: "Galería Comercial - Centro Salta",
-      images: ["/Galería Margalef", "/Caracteristicas.png"],
+      images: ["/Galería Margalef.jpg", "/Caracteristicas.png"],
     },
     {
       title: "FORMATO DIGITAL",
