@@ -1,0 +1,17 @@
+[
+  { "id": 1, "name": "Cartel Alvear y Arenales", "category": "Grandes Formatos", "lat": -24.770833, "lng": -65.417436 },
+  { "id": 2, "name": "Cartel Aunor", "category": "Grandes Formatos", "lat": -24.777699, "lng": -65.314734 },
+  { "id": 3, "name": "Carteles Acceso Norte", "category": "Grandes Formatos", "lat": -24.758343, "lng": -65.344181 },
+  { "id": 4, "name": "Cartel Av. Ex Combatientes de Malvinas", "category": "Grandes Formatos", "lat": -24.834857, "lng": -65.431303 },
+  { "id": 5, "name": "Cartel Acceso al Aeropuerto", "category": "Grandes Formatos", "lat": -24.838572, "lng": -65.477453 },
+  { "id": 6, "name": "Medianera Campo la Cruz", "category": "Grandes Formatos", "lat": -24.773671, "lng": -65.417969 },
+  { "id": 7, "name": "Cartel LED - Galería Margalef", "category": "Tótems LED", "lat": -24.7899858, "lng": -65.4124044 },
+  { "id": 8, "name": "Tótem Led - Galería La Continental", "category": "Tótems LED", "lat": -24.7892203, "lng": -65.4110559 },
+  { "id": 9, "name": "Tótem Led - Galería Buenos Aires", "category": "Tótems LED", "lat": -24.7905616, "lng": -65.4097912 },
+  { "id": 10, "name": "Tótems LED (2) - El Punto San Lorenzo Chico", "category": "Tótems LED", "lat": -24.7906227, "lng": -65.486678 },
+  { "id": 11, "name": "Tótem Led - UCASAL", "category": "Tótems LED", "lat": -24.7417049, "lng": -65.3936749 },
+  { "id": 12, "name": "Tótems LED (2) - Galería El Palacio", "category": "Tótems LED", "lat": -24.7893497, "lng": -65.4110747 },
+  { "id": 13, "name": "Pantalla Led", "category": "Pantallas LED", "lat": -24.7950594, "lng": -65.3985119 },
+  { "id": 14, "name": "Vallado Av. Bicentenario", "category": "Vallados", "lat": -24.7853, "lng": -65.4102 },
+  { "id": 15, "name": "Vallado Plaza 9 de Julio", "category": "Vallados", "lat": -24.7911, "lng": -65.4106 }
+]
