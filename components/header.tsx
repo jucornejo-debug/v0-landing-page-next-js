@@ -31,6 +31,12 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-12 ml-auto mr-8">
+            <Link
+              href="/presupuesto"
+              className="font-sans text-sm font-semibold rounded-full bg-white/10 px-4 py-2 ring-1 ring-white/40 hover:bg-white/20 transition-colors"
+            >
+              Cotizá tu campaña
+            </Link>
             <button
               onClick={() => scrollToSection("nosotros")}
               className="font-sans text-sm hover:opacity-80 transition-opacity"
@@ -59,6 +65,13 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white text-primary border-t border-gray-200">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
+            <Link
+              href="/presupuesto"
+              onClick={() => setMobileMenuOpen(false)}
+              className="font-sans text-base font-semibold text-left py-2 rounded-lg bg-primary/10 px-3 hover:bg-primary/20 transition-colors"
+            >
+              Cotizá tu campaña
+            </Link>
             <button
               onClick={() => scrollToSection("nosotros")}
               className="font-sans text-base text-left py-2 hover:opacity-80 transition-opacity"

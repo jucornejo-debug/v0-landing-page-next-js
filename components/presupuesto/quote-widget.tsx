@@ -318,17 +318,22 @@ function ConfigModal({
               label="Pases por día"
               value={passesPerDay}
               min={1}
-              onChange={setPassesPerDay}
+              onChange={(n) => setPassesPerDay(n === "" ? 1 : n)}
             />
             <NumberField
               label="Días de campaña"
               value={campaignDays}
               min={1}
-              onChange={setCampaignDays}
+              onChange={(n) => setCampaignDays(n === "" ? 1 : n)}
             />
           </div>
         ) : (
-          <NumberField label="Meses de alquiler" value={rentalMonths} min={1} onChange={setRentalMonths} />
+          <NumberField
+            label="Meses de alquiler"
+            value={rentalMonths}
+            min={1}
+            onChange={(n) => setRentalMonths(n === "" ? 1 : n)}
+          />
         )}
 
         <button
@@ -352,10 +357,10 @@ function SextuplesSection({
   sextuples: SextuplesItem | null
   onChange: (s: SextuplesItem | null) => void
 }) {
-  const [quantity, setQuantity] = useState(sextuples?.quantity ?? SEXTUPLES_MIN)
+  const [quantity, setQuantity] = useState<number | "">(sextuples?.quantity ?? "")
   const [durationDays, setDurationDays] = useState(sextuples?.durationDays ?? SEXTUPLES_MIN_DAYS)
 
-  const qtyValid = quantity >= SEXTUPLES_MIN && quantity <= SEXTUPLES_MAX
+  const qtyValid = quantity !== "" && quantity >= SEXTUPLES_MIN && quantity <= SEXTUPLES_MAX
   const daysValid = durationDays >= SEXTUPLES_MIN_DAYS
 
   return (
@@ -376,9 +381,10 @@ function SextuplesSection({
             value={quantity}
             min={SEXTUPLES_MIN}
             max={SEXTUPLES_MAX}
+            placeholder={`Mín. ${SEXTUPLES_MIN}`}
             onChange={setQuantity}
           />
-          {!qtyValid && (
+          {quantity !== "" && !qtyValid && (
             <p className="mt-1 text-[11px] text-[#8b1e24]">
               Debe estar entre {SEXTUPLES_MIN} y {SEXTUPLES_MAX}.
             </p>
@@ -389,7 +395,7 @@ function SextuplesSection({
             label={`Duración en días (mín. ${SEXTUPLES_MIN_DAYS})`}
             value={durationDays}
             min={SEXTUPLES_MIN_DAYS}
-            onChange={setDurationDays}
+            onChange={(n) => setDurationDays(n === "" ? SEXTUPLES_MIN_DAYS : n)}
           />
           {!daysValid && <p className="mt-1 text-[11px] text-[#8b1e24]">Mínimo {SEXTUPLES_MIN_DAYS} días.</p>}
         </div>
@@ -399,7 +405,7 @@ function SextuplesSection({
         <button
           type="button"
           disabled={!qtyValid || !daysValid}
-          onClick={() => onChange({ quantity, durationDays })}
+          onClick={() => quantity !== "" && onChange({ quantity, durationDays })}
           className="flex items-center gap-2 rounded-lg bg-[#8b1e24] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#6d1619] disabled:cursor-not-allowed disabled:opacity-50"
         >
           <Plus className="h-4 w-4" />
@@ -422,16 +428,19 @@ function NumberField({
   value,
   min,
   max,
+  placeholder,
   onChange,
 }: {
   label: string
-  value: number
+  value: number | ""
   min: number
   max?: number
-  onChange: (n: number) => void
+  placeholder?: string
+  onChange: (n: number | "") => void
 }) {
   function step(delta: number) {
-    let next = value + delta
+    // If empty, stepping starts from the minimum allowed value.
+    let next = (value === "" ? min : value) + delta
     if (next < min) next = min
     if (max !== undefined && next > max) next = max
     onChange(next)
@@ -454,7 +463,11 @@ function NumberField({
           value={value}
           min={min}
           max={max}
-          onChange={(e) => onChange(Number(e.target.value) || 0)}
+          placeholder={placeholder}
+          onChange={(e) => {
+            const raw = e.target.value
+            onChange(raw === "" ? "" : Number(raw))
+          }}
           className="w-full [appearance:textfield] border-x border-gray-200 py-2 text-center text-sm outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
         />
         <button
