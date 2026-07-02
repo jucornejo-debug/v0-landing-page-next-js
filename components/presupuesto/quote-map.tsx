@@ -56,7 +56,16 @@ export default function QuoteMap({ soportes, addedIds, onAdd }: QuoteMapProps) {
         return (
           <Marker key={s.id} position={[s.lat, s.lng]} icon={pinIcon(CATEGORY_COLORS[s.category], added)}>
             <Popup>
-              <div className="min-w-[190px] font-sans">
+              <div className="min-w-[200px] font-sans">
+                {s.imageUrl && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={s.imageUrl || "/placeholder.svg"}
+                    alt={s.name}
+                    className="mb-2 h-24 w-full rounded-md object-cover"
+                    loading="lazy"
+                  />
+                )}
                 <p className="text-sm font-bold text-[#8b1e24] leading-snug">{s.name}</p>
                 <p className="text-xs text-gray-600 mt-0.5">{s.category}</p>
                 <p className="text-[11px] text-gray-500 mt-1">
@@ -72,6 +81,14 @@ export default function QuoteMap({ soportes, addedIds, onAdd }: QuoteMapProps) {
                 >
                   {added ? "Ya está en el presupuesto" : "Agregar al presupuesto"}
                 </button>
+                {s.soporteUrl && (
+                  <a
+                    href={s.soporteUrl}
+                    className="mt-1.5 flex w-full items-center justify-center gap-1 rounded-md border border-[#8b1e24] px-3 py-1.5 text-xs font-semibold text-[#8b1e24] transition-colors hover:bg-[#8b1e24]/5"
+                  >
+                    Ver detalles del cartel
+                  </a>
+                )}
               </div>
             </Popup>
           </Marker>

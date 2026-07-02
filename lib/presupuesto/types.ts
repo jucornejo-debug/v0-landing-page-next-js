@@ -6,6 +6,10 @@ export interface Soporte {
   category: Category
   lat: number
   lng: number
+  /** Miniatura/foto de la ubicación mostrada en el popup del mapa. */
+  imageUrl?: string
+  /** Ruta a la página de detalle de este soporte (ej: "/soportes/cartel-alvear"). */
+  soporteUrl?: string
 }
 
 /** "digital" -> pases por día + días de campaña. "rental" -> meses de alquiler. */
