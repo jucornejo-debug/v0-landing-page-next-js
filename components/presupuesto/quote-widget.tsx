@@ -68,10 +68,53 @@ export function QuoteWidget({ soportes }: QuoteWidgetProps) {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setSubmitting(true)
-    // Simulate a network request.
-    await new Promise((r) => setTimeout(r, 1200))
-    setSubmitting(false)
-    setSubmitted(true)
+
+    // Creamos el FormData a partir del formulario HTML nativo (captura nombre, email, telefono)
+    const formData = new FormData(e.currentTarget)
+
+    // Formateamos los ítems del presupuesto elegidos en el mapa para que sean legibles en el mail
+    const itemsFormateados = items
+      .map((item) => {
+        const detalle =
+          item.pricingType === "digital"
+            ? `${item.passesPerDay} pases/día por ${item.campaignDays} días`
+            : `${item.rentalMonths} mes(es) de alquiler`
+        return `- [${item.category}] ID: ${item.id} - ${item.name} (${detalle})`
+      })
+      .join("\n")
+
+    formData.append("items_seleccionados", itemsFormateados || "Ningún punto seleccionado en el mapa")
+
+    // Formateamos la campaña de séxtuples si existe
+    if (sextuples) {
+      formData.append(
+        "campana_sextuples",
+        `Campaña activa: ${sextuples.quantity} unidades por ${sextuples.durationDays} días.`
+      )
+    } else {
+      formData.append("campana_sextuples", "No solicitó campaña de séxtuples")
+    }
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqearaky", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        alert("Hubo un problema al enviar tu presupuesto. Por favor, intentá nuevamente.")
+      }
+    } catch (error) {
+      console.error("Error enviando a Formspree:", error)
+      alert("Error de conexión. Revisá tu red e intentá de nuevo.")
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const totalItems = items.length + (sextuples ? 1 : 0)
@@ -208,6 +251,9 @@ export function QuoteWidget({ soportes }: QuoteWidgetProps) {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                  {/* Campos ocultos útiles para organizar Formspree */}
+                  <input type="hidden" name="_subject" value="Nueva solicitud de Presupuesto (Mapa)" />
+                  
                   <input
                     required
                     name="name"
@@ -312,6 +358,7 @@ function ConfigModal({
           </button>
         </div>
 
+        {/* Inputs */}
         {pricing === "digital" ? (
           <div className="flex flex-col gap-4">
             <NumberField
@@ -439,7 +486,6 @@ function NumberField({
   onChange: (n: number | "") => void
 }) {
   function step(delta: number) {
-    // If empty, stepping starts from the minimum allowed value.
     let next = (value === "" ? min : value) + delta
     if (next < min) next = min
     if (max !== undefined && next > max) next = max

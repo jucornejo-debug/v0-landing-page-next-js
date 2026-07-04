@@ -18,7 +18,7 @@ function pinIcon(color: string, dimmed: boolean) {
   return L.divIcon({
     html,
     className: "",
-    iconSize: [30, 42],
+    iconSize: [10, 14],
     iconAnchor: [0, 0],
     popupAnchor: [0, -38],
   })
@@ -50,7 +50,7 @@ export default function QuoteMap({ soportes, addedIds, onAdd }: QuoteMapProps) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {soportes.map((s) => {
+      {soportes.filter((s) => s.category !== "Vallados").map((s) => {
         const added = addedIds.includes(s.id)
         const pricing = getPricingType(s.category)
         return (

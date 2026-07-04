@@ -8,7 +8,7 @@ import type { Soporte } from "@/lib/presupuesto/types"
 export const metadata = {
   title: "Armá tu presupuesto | Publicidad en Vía Pública",
   description:
-    "Seleccioná soportes de publicidad exterior en el mapa, agregá una campaña de séxtuples y solicitá tu cotización.",
+    "Seleccioná soportes de publicidad exterior en el mapa, agregá una campaña de séxtuples y solicitá tu cotización a disponibilidad.",
 }
 
 async function getSoportes(): Promise<Soporte[]> {
