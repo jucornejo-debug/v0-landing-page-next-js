@@ -30,7 +30,7 @@ export function Hero() {
         </h1>
 
         <p className="text-base md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-sans">
-          Soluciones publicitarias de alto impacto para tu marca
+          Visión y cobertura para la empresa.
         </p>
 
         <Link
