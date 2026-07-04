@@ -29,7 +29,7 @@ export function Hero() {
           DOOH
         </h1>
 
-        <p className="text-base md:text-XL mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-sans">
+        <p className="text-xl md:text-2xl mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-sans">">
           Visión y cobertura para la empresa.
         </p>
 
