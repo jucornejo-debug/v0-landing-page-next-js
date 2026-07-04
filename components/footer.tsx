@@ -80,6 +80,17 @@ export function Footer() {
                 +54 387 022-170
               </a>
             </p>
+            <p className="font-sans">
+              Teléfono:{" "}
+              <a
+                href="https://wa.me/5493876859601?text=Hola%20NOA%20Publicidad%2C%20quiero%20hacer%20una%20consulta."
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline"
+              >
+                +54 9 3876 85-9601
+              </a>
+            </p>
 
             <p className="font-sans">📍 Salta, Argentina</p>
           </div>
