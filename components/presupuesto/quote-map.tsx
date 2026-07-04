@@ -18,7 +18,7 @@ function pinIcon(color: string, dimmed: boolean) {
   return L.divIcon({
     html,
     className: "",
-    iconSize: [30, 42],
+    iconSize: [10, 14],
     iconAnchor: [0, 0],
     popupAnchor: [0, -38],
   })
