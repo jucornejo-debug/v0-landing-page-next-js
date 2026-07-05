@@ -40,18 +40,18 @@ export function SupportsFull() {
   ]
     const pantallasLED = [
     {
-      title: "FORMATO DIGITAL",
-      location: "Centro comercial - San Lorenzo Chico",
+      title: "Pantalla LED",
+      location: "4x5m - Frente a la terminal de Salta",
       images: ["/Pantalla Grande.jpg", "/Caracteristicas.png"],
     },
     {
       title: "FORMATOS DIGITAL",
-      location: "Galería Comercial - Centro Salta",
+      location: "XxY - Centro Salta",
       images: ["/Galeria Margaled.png", "/Caracteristicas.png"],
     },
     {
       title: "FORMATO DIGITAL",
-      location: "Galería Comercial - Centro Salta",
+      location: "XxY - Centro Salta",
       images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
     },
   ]
