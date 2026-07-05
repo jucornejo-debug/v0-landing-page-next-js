@@ -129,7 +129,7 @@ export function SupportsFull() {
             Formatos Digitales - Pantallas LED
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-            {Pantallas LED.map((item, index) => (
+            {vallados.map((item, index) => (
               <SupportCard key={index} item={item} />
             ))}
           </div>
