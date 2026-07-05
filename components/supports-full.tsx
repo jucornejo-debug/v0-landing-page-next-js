@@ -23,6 +23,23 @@ export function SupportsFull() {
       images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
     },
   ]
+    const pantallasLED = [
+    {
+      title: "FORMATO DIGITAL",
+      location: "Centro comercial - San Lorenzo Chico",
+      images: ["/Imagen Tótems (2).jpeg", "/Caracteristicas.png"],
+    },
+    {
+      title: "FORMATOS DIGITAL",
+      location: "Galería Comercial - Centro Salta",
+      images: ["/Galeria Margaled.png", "/Caracteristicas.png"],
+    },
+    {
+      title: "FORMATO DIGITAL",
+      location: "Galería Comercial - Centro Salta",
+      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
+    },
+  ]
   const grandesFormatos = [
     {
       title: "GRANDES FORMATOS",
@@ -98,10 +115,21 @@ export function SupportsFull() {
                 {/* Formatos Digitales */}
         <div className="mb-16">
           <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-6xl text-center">
-            FORMATOS DIGITALES
+            FORMATOS DIGITALES - Tótems
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
             {digitales.map((item, index) => (
+              <SupportCard key={index} item={item} />
+            ))}
+          </div>
+        </div>
+        {/* Formatos Digitales Pantallas*/}
+        <div className="mb-16">
+          <h3 className="font-sans font-bold text-3xl text-primary uppercase mb-8 tracking-tight md:text-6xl text-center">
+            Formatos Digitales - Pantallas LED
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+            {Pantallas LED.map((item, index) => (
               <SupportCard key={index} item={item} />
             ))}
           </div>
@@ -130,7 +158,6 @@ export function SupportsFull() {
             ))}
           </div>
         </div>
-
 
         <div className="flex justify-center mt-12">
           <Link
