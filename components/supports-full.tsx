@@ -25,12 +25,12 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Galería El Palacio - Centro Salta",
-      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
+      images: ["/El Palacio.jpeg", "/Caracteristicas.png"],
     },
     {
       title: "FORMATO DIGITAL",
       location: "Galería Buenos Aires - Centro Salta",
-      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
+      images: ["/Galeria Bs As.jpg", "/Caracteristicas.png"],
     },
     {
       title: "FORMATO DIGITAL",
