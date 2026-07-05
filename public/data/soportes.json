@@ -121,11 +121,11 @@
     "imageUrl": "/carteles/vallado-plaza-9.jpg" 
   }
   { 
-    "id": 15, 
+    "id": 16, 
     "name": "Perón y Savio", 
     "category": "Grandes Formatos", 
-    "lat": -24.769069, 
-    "lng": -65.443351, 
+    "lat": -24.7690, 
+    "lng": -65.4433, 
     "imageUrl": "/Perón y Savio 42 mts2.png" 
   } 
 ]
