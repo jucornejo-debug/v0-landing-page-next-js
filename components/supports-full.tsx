@@ -15,7 +15,7 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Galería Margalef - Centro Salta",
-      images: ["/Galeria Margaled.png", "/Caracteristicas.png"],
+      images: ["/Galeria Margaled.png"],
     },
     {
       title: "FORMATO DIGITAL",
@@ -42,17 +42,17 @@ export function SupportsFull() {
     {
       title: "Pantalla LED",
       location: "4x5m - Frente a la terminal de Salta",
-      images: ["/Pantalla Grande.jpg", "/Caracteristicas.png"],
+      images: ["/Pantalla Grande.jpg"],
     },
     {
       title: "FORMATOS DIGITAL",
       location: "XxY - Centro Salta",
-      images: ["/Galeria Margaled.png", "/Caracteristicas.png"],
+      images: ["/Galeria Margaled.png",],
     },
     {
       title: "FORMATO DIGITAL",
       location: "XxY - Centro Salta",
-      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
+      images: ["/Imagen Tótems.jpeg"],
     },
   ]
   const grandesFormatos = [
