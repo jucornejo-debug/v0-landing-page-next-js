@@ -35,7 +35,7 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Universidad Católica- Salta",
-      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
+      images: ["/UCASAL.png", "/Caracteristicas.png"],
     },
   ]
     const pantallasLED = [
