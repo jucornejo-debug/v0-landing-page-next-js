@@ -9,17 +9,32 @@ export function SupportsFull() {
     const digitales = [
     {
       title: "FORMATO DIGITAL",
-      location: "Centro comercial - San Lorenzo Chico",
+      location: "El Punto - San Lorenzo Chico",
       images: ["/Imagen Tótems (2).jpeg", "/Caracteristicas.png"],
     },
     {
-      title: "FORMATOS DIGITAL",
-      location: "Galería Comercial - Centro Salta",
+      title: "FORMATO DIGITAL",
+      location: "Galería Margalef - Centro Salta",
       images: ["/Galeria Margaled.png", "/Caracteristicas.png"],
     },
     {
       title: "FORMATO DIGITAL",
-      location: "Galería Comercial - Centro Salta",
+      location: "Galería Continental - Centro Salta",
+      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
+    },
+    {
+      title: "FORMATO DIGITAL",
+      location: "Galería El Palacio - Centro Salta",
+      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
+    },
+    {
+      title: "FORMATO DIGITAL",
+      location: "Galería Buenos Aires - Centro Salta",
+      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
+    },
+    {
+      title: "FORMATO DIGITAL",
+      location: "Universidad Católica- Salta",
       images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
     },
   ]
@@ -129,7 +144,7 @@ export function SupportsFull() {
             Formatos Digitales - Pantallas LED
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-            {vallados.map((item, index) => (
+            {pantallasLED.map((item, index) => (
               <SupportCard key={index} item={item} />
             ))}
           </div>
