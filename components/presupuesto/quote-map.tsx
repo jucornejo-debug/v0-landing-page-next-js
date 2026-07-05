@@ -10,7 +10,7 @@ import { CATEGORY_COLORS, getPricingType, type Soporte } from "@/lib/presupuesto
 function pinIcon(color: string, dimmed: boolean) {
   const html = `
     <div style="transform: translate(-50%, -100%); opacity:${dimmed ? 0.4 : 1};">
-      <svg width="30" height="42" viewBox="0 0 30 42" xmlns="http://www.w3.org/2000/svg">
+      <svg width="20" height="28" viewBox="0 0 30 42" xmlns="http://www.w3.org/2000/svg">
         <path d="M15 0C6.7 0 0 6.7 0 15c0 10.5 15 27 15 27s15-16.5 15-27C30 6.7 23.3 0 15 0z" fill="${color}"/>
         <circle cx="15" cy="15" r="6" fill="#ffffff"/>
       </svg>
@@ -18,9 +18,9 @@ function pinIcon(color: string, dimmed: boolean) {
   return L.divIcon({
     html,
     className: "",
-    iconSize: [10, 14],
-    iconAnchor: [0, 0],
-    popupAnchor: [0, -38],
+    iconSize: [20, 28],      // <-- Coincide con el SVG
+    iconAnchor: [10, 28],    // <-- Centra la base del pin en la coordenada exacta
+    popupAnchor: [0, -28],   // <-- El cartelito aparece justo arriba del pin
   })
 }
 
