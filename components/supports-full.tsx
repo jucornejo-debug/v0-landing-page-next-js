@@ -45,14 +45,14 @@ export function SupportsFull() {
       images: ["/Pantalla Grande.jpg"],
     },
     {
-      title: "FORMATOS DIGITAL",
-      location: "XxY - Centro Salta",
-      images: ["/Galeria Margaled.png",],
+      title: "Pantalla LED",
+      location: "Avenida Chile",
+      images: ["/Pantalla - Avenida chile.jpeg"],
     },
     {
       title: "FORMATO DIGITAL",
-      location: "XxY - Centro Salta",
-      images: ["/Imagen Tótems.jpeg"],
+      location: "Bicentenario esq. O´higgins",
+      images: ["/Pantalla - Bicentenario esq. Ohiggins.jpeg"],
     },
   ]
   const grandesFormatos = [
