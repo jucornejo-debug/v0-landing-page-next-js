@@ -30,7 +30,7 @@ export function SupportsFull() {
     {
       title: "FORMATO DIGITAL",
       location: "Galería Buenos Aires - Centro Salta",
-      images: ["/Galeria Bs As.jpg", "/Caracteristicas.png"],
+      images: ["/Buenos Aires.jpg", "/Caracteristicas.png"],
     },
     {
       title: "FORMATO DIGITAL",
