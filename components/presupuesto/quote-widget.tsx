@@ -186,6 +186,7 @@ export function QuoteWidget({ soportes }: QuoteWidgetProps) {
                       </span>
                       <div className="min-w-0 flex-1">
                         <p className="truncate text-sm font-semibold text-[#333]">{item.name}</p>
+                        {item.size && <p className="text-xs text-gray-400">{item.size}</p>}
                         <p className="text-xs text-gray-500">
                           {item.pricingType === "digital"
                             ? `${item.passesPerDay} pases/día · ${item.campaignDays} días`
@@ -328,6 +329,7 @@ function ConfigModal({
         id: soporte.id,
         name: soporte.name,
         category: soporte.category,
+        size: soporte.size,
         pricingType: "digital",
         passesPerDay,
         campaignDays,
@@ -337,6 +339,7 @@ function ConfigModal({
         id: soporte.id,
         name: soporte.name,
         category: soporte.category,
+        size: soporte.size,
         pricingType: "rental",
         rentalMonths,
       })
@@ -352,6 +355,7 @@ function ConfigModal({
               {soporte.category}
             </p>
             <h4 className="text-lg font-bold text-[#333]">{soporte.name}</h4>
+            {soporte.size && <p className="mt-0.5 text-xs text-gray-500">Tamaño: {soporte.size}</p>}
           </div>
           <button type="button" onClick={onCancel} className="text-gray-400 hover:text-[#8b1e24]" aria-label="Cerrar">
             <X className="h-5 w-5" />
