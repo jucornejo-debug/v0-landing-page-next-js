@@ -25,7 +25,7 @@ const QuoteMap = dynamic(() => import("./quote-map"), {
 
 const SEXTUPLES_MIN = 15
 const SEXTUPLES_MAX = 250
-const SEXTUPLES_MIN_DAYS = 15
+const SEXTUPLES_MIN_DAYS = 10
 
 interface QuoteWidgetProps {
   soportes: Soporte[]
