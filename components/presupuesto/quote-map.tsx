@@ -97,6 +97,12 @@ export default function QuoteMap({ soportes, addedIds, onAdd }: QuoteMapProps) {
                   <p className="mt-1 text-base font-bold leading-snug text-[#8b1e24]">{s.name}</p>
 
                   <div className="mt-2 space-y-1 rounded-md bg-gray-50 p-2.5 text-xs text-gray-600">
+                    {s.size && (
+                      <p>
+                        <span className="font-semibold text-gray-700">Tamaño: </span>
+                        {s.size}
+                      </p>
+                    )}
                     <p>
                       <span className="font-semibold text-gray-700">Modalidad: </span>
                       {pricing === "digital"
