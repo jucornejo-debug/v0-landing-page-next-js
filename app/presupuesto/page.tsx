@@ -1,4 +1,4 @@
-	import { readFile } from "node:fs/promises"
+import { readFile } from "node:fs/promises"
 import path from "node:path"
 import { notFound } from "next/navigation"
 import Link from "next/link"
