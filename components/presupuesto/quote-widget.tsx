@@ -29,9 +29,11 @@ const SEXTUPLES_MIN_DAYS = 10
 
 interface QuoteWidgetProps {
   soportes: Soporte[]
+  /** Id de un soporte para centrar el mapa y abrir su popup al llegar desde /soportes/[id]. */
+  focusId?: number | null
 }
 
-export function QuoteWidget({ soportes }: QuoteWidgetProps) {
+export function QuoteWidget({ soportes, focusId }: QuoteWidgetProps) {
   const [activeCategories, setActiveCategories] = useState<Category[]>([...CATEGORIES])
   const [items, setItems] = useState<BudgetItem[]>([])
   const [pending, setPending] = useState<Soporte | null>(null)
@@ -152,7 +154,7 @@ export function QuoteWidget({ soportes }: QuoteWidgetProps) {
 
           {/* Map */}
           <div className="relative h-[420px] w-full overflow-hidden rounded-xl border border-gray-200 shadow-sm md:h-[520px]">
-            <QuoteMap soportes={visibleSoportes} addedIds={addedIds} onAdd={handleAddPending} />
+            <QuoteMap soportes={visibleSoportes} addedIds={addedIds} onAdd={handleAddPending} focusId={focusId} />
           </div>
 
           {/* Séxtuples */}
