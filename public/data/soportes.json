@@ -1,131 +1,184 @@
 [
-  { 
-    "id": 1, 
-    "name": "Cartel Alvear y Arenales", 
-    "category": "Grandes Formatos", 
-    "lat": -24.770833, 
-    "lng": -65.417436, 
-    "imageUrl": "/carteles/alvear.jpg", 
-    "soporteUrl": "/Gran formato Alvear y Arenales.jpeg" 
+  {
+    "id": 1,
+    "name": "Cartel Alvear y Arenales",
+    "category": "Grandes Formatos",
+    "lat": -24.770833,
+    "lng": -65.417436,
+    "imageUrl": "/carteles/alvear.jpg",
+    "soporteUrl": "/Gran formato Alvear y Arenales.jpeg",
+    "size": "3 carteles de 3x3 mts o un cartel de 9x3 mts"
   },
-  { 
-    "id": 2, 
-    "name": "Cartel Aunor", 
-    "category": "Grandes Formatos", 
-    "lat": -24.777699, 
-    "lng": -65.314734, 
-    "imageUrl": "/Aunor acceso Salta.jpeg" 
+  {
+    "id": 2,
+    "name": "Cartel Aunor",
+    "category": "Grandes Formatos",
+    "lat": -24.777699,
+    "lng": -65.314734,
+    "imageUrl": "/Aunor acceso Salta.jpeg",
+    "size": "6x8 mts"
   },
-  { 
-    "id": 3, 
-    "name": "Carteles Acceso Norte", 
-    "category": "Grandes Formatos", 
-    "lat": -24.758343, 
-    "lng": -65.344181, 
-    "imageUrl": "/Acceso Norte.JPG" 
+  {
+    "id": 3,
+    "name": "Carteles Acceso Norte",
+    "category": "Grandes Formatos",
+    "lat": -24.758343,
+    "lng": -65.344181,
+    "imageUrl": "/Acceso Norte.JPG",
+    "size": "5x10 mts"
   },
-  { 
-    "id": 4, 
-    "name": "Cartel Av. Ex Combatientes de Malvinas", 
-    "category": "Grandes Formatos", 
-    "lat": -24.834857, 
-    "lng": -65.431303, 
-    "imageUrl": "/Ex Combatientes de Malvinas foto 1.jpeg" 
+  {
+    "id": 4,
+    "name": "Cartel Av. Ex Combatientes de Malvinas",
+    "category": "Grandes Formatos",
+    "lat": -24.834857,
+    "lng": -65.431303,
+    "imageUrl": "/Ex Combatientes de Malvinas foto 1.jpeg",
+    "size": ""
   },
-  { 
-    "id": 5, 
-    "name": "Cartel Acceso al Aeropuerto", 
-    "category": "Grandes Formatos", 
-    "lat": -24.838572, 
-    "lng": -65.477453, 
-    "imageUrl": "/Cartel Aeropuerto.jpg" 
+  {
+    "id": 5,
+    "name": "Cartel Acceso al Aeropuerto",
+    "category": "Grandes Formatos",
+    "lat": -24.838572,
+    "lng": -65.477453,
+    "imageUrl": "/Cartel Aeropuerto.jpg",
+    "size": "10x5"
   },
-  { 
-    "id": 6, 
-    "name": "Medianera Campo la Cruz", 
-    "category": "Grandes Formatos", 
-    "lat": -24.773671, 
-    "lng": -65.417969, 
-    "imageUrl": "/Montaje medianera CAmpo la Cruz.jpeg" 
+  {
+    "id": 6,
+    "name": "Medianera Campo la Cruz",
+    "category": "Grandes Formatos",
+    "lat": -24.773671,
+    "lng": -65.417969,
+    "imageUrl": "/Montaje medianera CAmpo la Cruz.jpeg",
+    "size": "56 m2"
   },
-  { 
-    "id": 7, 
-    "name": "Cartel LED - Galería Margalef", 
-    "category": "Tótems LED", 
-    "lat": -24.7899858, "lng": -65.4124044, 
-    "imageUrl": "/Galeria Margalef.png", 
-    "soporteUrl": "/Galeria Margalef.png" 
+  {
+    "id": 7,
+    "name": "Cartel LED - Galería Margalef",
+    "category": "Tótems LED",
+    "lat": -24.7899858,
+    "lng": -65.4124044,
+    "imageUrl": "/Galeria Margalef.png",
+    "soporteUrl": "/Galeria Margalef.png",
+    "size": "0,8x1,28 mts (320x512px)"
   },
-  { 
-    "id": 8, 
-    "name": "Tótem Led - Galería La Continental", 
-    "category": "Tótems LED", 
-    "lat": -24.7892203, 
-    "lng": -65.4110559, 
-    "imageUrl": "/La Continental.jpg" 
+  {
+    "id": 8,
+    "name": "Tótem Led - Galería La Continental",
+    "category": "Tótems LED",
+    "lat": -24.7892203,
+    "lng": -65.4110559,
+    "imageUrl": "/La Continental.jpg",
+    "size": "0,8x1,28 mts (320x512px)"
   },
-  { 
-    "id": 9, 
-    "name": "Tótem Led - Galería Buenos Aires", 
-    "category": "Tótems LED", 
-    "lat": -24.7905616, 
-    "lng": -65.4097912, 
-    "imageUrl": "/Buenos Aires.jpg" 
+  {
+    "id": 9,
+    "name": "Tótem Led - Galería Buenos Aires",
+    "category": "Tótems LED",
+    "lat": -24.7905616,
+    "lng": -65.4097912,
+    "imageUrl": "/Buenos Aires.jpg",
+    "size": "0,8x1,28 mts (320x512px)"
   },
-  { 
-    "id": 10, 
-    "name": "Tótems LED (2) - El Punto San Lorenzo Chico", 
-    "category": "Tótems LED", 
-    "lat": -24.7906227, 
-    "lng": -65.486678, 
-    "imageUrl": "/El Punto.jpg" 
+  {
+    "id": 10,
+    "name": "Tótems LED (2) - El Punto San Lorenzo Chico",
+    "category": "Tótems LED",
+    "lat": -24.7906227,
+    "lng": -65.486678,
+    "imageUrl": "/El Punto.jpg",
+    "size": "0,8x1,28 mts (320x512px)"
   },
-  { 
-    "id": 11, 
-    "name": "Tótem Led - UCASAL", 
-    "category": "Tótems LED", 
-    "lat": -24.7417049, 
-    "lng": -65.3936749, 
-    "imageUrl": "/UCASAL.png" 
+  {
+    "id": 11,
+    "name": "Tótem Led - UCASAL",
+    "category": "Tótems LED",
+    "lat": -24.7417049,
+    "lng": -65.3936749,
+    "imageUrl": "/UCASAL.png",
+    "size": "0,8x1,28 mts (320x512px)"
   },
-  { 
-    "id": 12, 
-    "name": "Tótems LED (2) - Galería El Palacio", 
-    "category": "Tótems LED", 
-    "lat": -24.7893497, 
-    "lng": -65.4110747, 
-    "imageUrl": "/El Palacio.jpeg" 
+  {
+    "id": 12,
+    "name": "Tótems LED (2) - Galería El Palacio",
+    "category": "Tótems LED",
+    "lat": -24.7893497,
+    "lng": -65.4110747,
+    "imageUrl": "/El Palacio.jpeg",
+    "size": "0,8x1,28 mts (320x512px)"
   },
-  { 
-    "id": 13, 
-    "name": "Pantalla Led", 
-    "category": "Pantallas LED", 
-    "lat": -24.7950594, 
-    "lng": -65.3985119, 
-    "imageUrl": "/Pantalla Grande.jpg" 
+  {
+    "id": 13,
+    "name": "Pantalla Led",
+    "category": "Pantallas LED",
+    "lat": -24.7950594,
+    "lng": -65.3985119,
+    "imageUrl": "/Pantalla Grande.jpg",
+    "size": ""
   },
-  { 
-    "id": 14, 
-    "name": "Vallado Av. Bicentenario", 
-    "category": "Vallados", 
-    "lat": -24.7853, 
-    "lng": -65.4102, 
-    "imageUrl": "/carteles/vallado-bicentenario.jpg" 
+  {
+    "id": 14,
+    "name": "Vallado Av. Bicentenario",
+    "category": "Vallados",
+    "lat": -24.7853,
+    "lng": -65.4102,
+    "imageUrl": "/carteles/vallado-bicentenario.jpg",
+    "size": ""
   },
-  { 
-    "id": 15, 
-    "name": "Vallado Plaza 9 de Julio", 
-    "category": "Vallados", 
-    "lat": -24.7911, 
-    "lng": -65.4106, 
-    "imageUrl": "/carteles/vallado-plaza-9.jpg" 
+  {
+    "id": 15,
+    "name": "Vallado Plaza 9 de Julio",
+    "category": "Vallados",
+    "lat": -24.7911,
+    "lng": -65.4106,
+    "imageUrl": "/carteles/vallado-plaza-9.jpg",
+    "size": ""
   },
-  { 
-    "id": 16, 
-    "name": "Perón y Savio", 
-    "category": "Grandes Formatos", 
-    "lat": -24.7690, 
-    "lng": -65.4433, 
-    "imageUrl": "/Perón y Savio 42 mts2.png" 
-  } 
+  {
+    "id": 16,
+    "name": "Perón y Savio",
+    "category": "Grandes Formatos",
+    "lat": -24.7690,
+    "lng": -65.4433,
+    "imageUrl": "/Perón y Savio 42 mts2.png",
+    "size": "2 carteles 6x7 mts dirección San Lorenzo y dirección Salta"
+  },
+  {
+    "id": 17,
+    "name": "Sarmiento y España",
+    "category": "Grandes Formatos",
+    "lat": -24.787959,
+    "lng": -65.416359,
+    "imageUrl": "/Perón y Savio 42 mts2.png",
+    "size": "4x4 mts (Centro de Salta)"
+  },
+  {
+    "id": 18,
+    "name": "RN 9 ACCESO A SALTA",
+    "category": "Grandes Formatos",
+    "lat": -24.787959,
+    "lng": -65.416359,
+    "imageUrl": "/Perón y Savio 42 mts2.png",
+    "size": "10x5 mts"
+  }, 
+  {
+    "id": 20,
+    "name": "Avda. Sarmiento esquina O´ Hgiggins",
+    "category": "Grandes Formatos",
+    "lat": -24.77555,
+    "lng": -65.417255,
+    "imageUrl": "/Perón y Savio 42 mts2.png",
+    "size": "4x5 mts"
+  }, 
+  {
+    "id": 19,
+    "name": "Perón y Savio",
+    "category": "Grandes Formatos",
+    "lat": -24.7690,
+    "lng": -65.4433,
+    "imageUrl": "/Gran Formato Perón y Savio 50 mts2.jpg",
+    "size": "10x5 mts"
+  }  
 ]
