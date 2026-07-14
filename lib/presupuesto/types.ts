@@ -10,6 +10,8 @@ export interface Soporte {
   imageUrl?: string
   /** Ruta a la página de detalle de este soporte (ej: "/soportes/cartel-alvear"). */
   soporteUrl?: string
+  /** Tamaño físico del cartel, ej: "4 x 8 m" o "42 m²". */
+  size?: string
 }
 
 /** "digital" -> pases por día + días de campaña. "rental" -> meses de alquiler. */
@@ -35,6 +37,7 @@ export interface BudgetItem {
   id: number
   name: string
   category: Category
+  size?: string
   pricingType: PricingType
   // digital
   passesPerDay?: number
