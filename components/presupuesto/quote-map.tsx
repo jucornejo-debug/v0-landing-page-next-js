@@ -1,7 +1,7 @@
 "use client"
 
-import { useMemo } from "react"
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+import { useEffect, useMemo, useRef } from "react"
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet"
 import L from "leaflet"
 import "leaflet/dist/leaflet.css"
 import { CATEGORY_COLORS, getPricingType, type Soporte } from "@/lib/presupuesto/types"
@@ -24,13 +24,46 @@ function pinIcon(color: string, dimmed: boolean) {
   })
 }
 
+/** Centra el mapa y abre el popup del soporte indicado por focusId (ej: viniendo de /soportes/16). */
+function FocusHandler({
+  focusId,
+  soportes,
+  markerRefs,
+}: {
+  focusId: number | null | undefined
+  soportes: Soporte[]
+  markerRefs: React.MutableRefObject<Map<number, L.Marker>>
+}) {
+  const map = useMap()
+
+  useEffect(() => {
+    if (!focusId) return
+    const soporte = soportes.find((s) => s.id === focusId)
+    if (!soporte) return
+
+    map.setView([soporte.lat, soporte.lng], 16)
+
+    // Esperamos un tick a que el marker exista en markerRefs (se registra al montar el <Marker>)
+    const timer = setTimeout(() => {
+      markerRefs.current.get(focusId)?.openPopup()
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [focusId, soportes, map, markerRefs])
+
+  return null
+}
+
 interface QuoteMapProps {
   soportes: Soporte[]
   addedIds: number[]
   onAdd: (s: Soporte) => void
+  /** Id de un soporte para centrar el mapa y abrir su popup automáticamente (ej: llegando desde /soportes/16). */
+  focusId?: number | null
 }
 
-export default function QuoteMap({ soportes, addedIds, onAdd }: QuoteMapProps) {
+export default function QuoteMap({ soportes, addedIds, onAdd, focusId }: QuoteMapProps) {
+  const markerRefs = useRef<Map<number, L.Marker>>(new Map())
   const center = useMemo<[number, number]>(() => {
     if (soportes.length === 0) return [-24.7859, -65.4117]
     const lat = soportes.reduce((a, s) => a + s.lat, 0) / soportes.length
@@ -66,12 +99,21 @@ export default function QuoteMap({ soportes, addedIds, onAdd }: QuoteMapProps) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <FocusHandler focusId={focusId} soportes={soportes} markerRefs={markerRefs} />
         {soportes.filter((s) => s.category !== "Vallados").map((s) => {
           const added = addedIds.includes(s.id)
           const pricing = getPricingType(s.category)
           const color = CATEGORY_COLORS[s.category]
           return (
-            <Marker key={s.id} position={[s.lat, s.lng]} icon={pinIcon(color, added)}>
+            <Marker
+              key={s.id}
+              position={[s.lat, s.lng]}
+              icon={pinIcon(color, added)}
+              ref={(marker) => {
+                if (marker) markerRefs.current.set(s.id, marker)
+                else markerRefs.current.delete(s.id)
+              }}
+            >
               <Popup minWidth={260} maxWidth={320}>
                 <div className="soporte-popup w-[260px] font-sans">
                   {s.imageUrl && (
@@ -123,14 +165,12 @@ export default function QuoteMap({ soportes, addedIds, onAdd }: QuoteMapProps) {
                     {added ? "Ya está en el presupuesto" : "Agregar al presupuesto"}
                   </button>
 
-                  {s.soporteUrl && (
-                    <a
-                      href={s.soporteUrl}
-                      className="mt-2 flex w-full items-center justify-center gap-1 rounded-md border border-[#8b1e24] px-3 py-2 text-xs font-semibold text-[#8b1e24] transition-colors hover:bg-[#8b1e24]/5"
-                    >
-                      Ver detalles del cartel
-                    </a>
-                  )}
+                  <a
+                    href={`/soportes/${s.id}`}
+                    className="mt-2 flex w-full items-center justify-center gap-1 rounded-md border border-[#8b1e24] px-3 py-2 text-xs font-semibold text-[#8b1e24] transition-colors hover:bg-[#8b1e24]/5"
+                  >
+                    Ver detalles del cartel
+                  </a>
                 </div>
               </Popup>
             </Marker>
