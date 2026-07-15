@@ -3,63 +3,23 @@
 import Image from "next/image"
 import { useState } from "react"
 import Link from "next/link"
+import type { Soporte } from "@/lib/presupuesto/types"
 
-export function SupportsFull() {
-  
-    const digitales = [
-    {
-      title: "FORMATO DIGITAL",
-      location: "Centro comercial - San Lorenzo Chico",
-      images: ["/Imagen Tótems (2).jpeg", "/Caracteristicas.png"],
-    },
-    {
-      title: "FORMATOS DIGITAL",
-      location: "Galería Comercial - Centro Salta",
-      images: ["/Galeria Margaled.png", "/Caracteristicas.png"],
-    },
-    {
-      title: "FORMATO DIGITAL",
-      location: "Galería Comercial - Centro Salta",
-      images: ["/Imagen Tótems.jpeg", "/Caracteristicas.png"],
-    },
+type Section = {
+  title: string
+  items: Soporte[]
+}
+
+export function SupportsFull({ soportes }: { soportes: Soporte[] }) {
+  const byCategory = (category: Soporte["category"]) => soportes.filter((s) => s.category === category)
+
+  // Four visual sections, dynamically populated from soportes.json.
+  const sections: Section[] = [
+    { title: "Formatos Digitales - Tótems", items: byCategory("Tótems LED") },
+    { title: "Formatos Digitales - Pantallas LED", items: byCategory("Pantallas LED") },
+    { title: "Grandes Formatos", items: byCategory("Grandes Formatos") },
+    { title: "Vallados", items: byCategory("Vallados") },
   ]
-  const grandesFormatos = [
-    {
-      title: "GRANDES FORMATOS",
-      location: "Ingreso/Salida ciudad",
-      images: ["/IngresoCiudad1.jpg", "/Publicación 6_1200x900.jpg"],
-    },
-    {
-      title: "GRANDES FORMATOS",
-      location: "Centro de la ciudad",
-      images: ["/Gran Formato Centro 4.jpg", "/GraformatoCentro.jpg"],
-    },
-    {
-      title: "GRANDES FORMATOS",
-      location: "Variado",
-      images: ["/Gran Formato Centro 2.jpg", "/GRAN FORMATO E-S.jpg"],
-    },
-  ]
-
-  const vallados = [
-    {
-      title: "VALLADOS",
-      location: "Simple",
-      images: ["/Valladosimple.jpg", "/Valladosimple1.jpg"],
-    },
-    {
-      title: "HIPER VALLADOS",
-      location: "Hiper Vallado",
-      images: ["/HiperVallado2.jpeg", "/HiperVallado3.jpg"],
-    },
-    {
-      title: "VALLADOS DOBLE",
-      location: "Vallado Doble",
-      images: ["/ValladoDoble.jpg", "/ValladoDoble1.jpg"],
-    },
-  ]
-
-
 
   return (
     <section id="soportes" className="bg-background">
@@ -75,9 +35,12 @@ export function SupportsFull() {
               <p className="text-base md:text-lg text-white mb-6 md:mb-8 font-sans">
                 Soportes de alto impacto diseñados para que tu marca se vea, se recuerde y se destaque en la calle.
               </p>
-              <button className="bg-background text-primary font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-white transition-colors">
-                Conocé más
-              </button>
+              <Link
+                href="/presupuesto"
+                className="inline-block bg-background text-primary font-sans text-base md:text-lg px-8 py-3 rounded-lg hover:bg-white transition-colors"
+              >
+                Cotizá tu campaña
+              </Link>
             </div>
             <div className="flex justify-center">
               <div className="rounded-3xl overflow-hidden shadow-2xl max-w-md w-full">
@@ -95,42 +58,20 @@ export function SupportsFull() {
       </div>
 
       <div className="container mx-auto px-4 py-12 md:py-16">
-                {/* Formatos Digitales */}
-        <div className="mb-16">
-          <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-6xl text-center">
-            FORMATOS DIGITALES
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-            {digitales.map((item, index) => (
-              <SupportCard key={index} item={item} />
-            ))}
-          </div>
-        </div>
-
-        {/* Grandes Formatos */}
-        <div className="mb-16">
-          <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-center text-6xl">
-            GRANDES FORMATOS
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-            {grandesFormatos.map((item, index) => (
-              <SupportCard key={index} item={item} />
-            ))}
-          </div>
-        </div>
-
-        {/* Vallados */}
-        <div className="mb-16">
-          <h3 className="font-sans font-bold text-3xl text-primary uppercase mb-8 tracking-tight md:text-6xl text-center">
-            VALLADOS
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-            {vallados.map((item, index) => (
-              <SupportCard key={index} item={item} />
-            ))}
-          </div>
-        </div>
-
+        {sections.map((section) =>
+          section.items.length === 0 ? null : (
+            <div key={section.title} className="mb-16">
+              <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-center text-3xl md:text-5xl lg:text-6xl text-balance">
+                {section.title}
+              </h3>
+              <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+                {section.items.map((item) => (
+                  <SupportCard key={item.id} item={item} />
+                ))}
+              </div>
+            </div>
+          ),
+        )}
 
         <div className="flex justify-center mt-12">
           <Link
@@ -150,40 +91,39 @@ export function SupportsFull() {
   )
 }
 
-function SupportCard({ item }: { item: { title: string; location: string; images: string[] } }) {
+function SupportCard({ item }: { item: Soporte }) {
+  const images = item.imageUrl ? [item.imageUrl] : ["/placeholder.svg"]
   const [currentImage, setCurrentImage] = useState(0)
 
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % item.images.length)
-  }
+  const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length)
+  const prevImage = () => setCurrentImage((prev) => (prev - 1 + images.length) % images.length)
 
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + item.images.length) % item.images.length)
-  }
+  // Vallados are not shown on the map, so we omit the "Ver en el mapa" link for them.
+  const showMapLink = item.category !== "Vallados"
 
   return (
-    <div className="w-full max-w-[280px]">
+    <div className="w-full max-w-[300px] flex flex-col">
       <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg bg-white mb-4 group">
         <Image
-          src={item.images[currentImage] || "/placeholder.svg"}
-          alt={item.title}
-          width={280}
-          height={280}
+          src={images[currentImage] || "/placeholder.svg"}
+          alt={item.name}
+          width={300}
+          height={300}
           className="w-full h-full object-cover"
         />
-        {item.images.length > 1 && (
+        {images.length > 1 && (
           <>
             <button
               onClick={prevImage}
               className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-              aria-label="Previous image"
+              aria-label="Imagen anterior"
             >
               ‹
             </button>
             <button
               onClick={nextImage}
               className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-              aria-label="Next image"
+              aria-label="Imagen siguiente"
             >
               ›
             </button>
@@ -191,27 +131,53 @@ function SupportCard({ item }: { item: { title: string; location: string; images
         )}
       </div>
 
-      <div className="text-center">
-        <h4 className="font-sans font-bold text-lg md:text-xl text-primary uppercase mb-1 tracking-tight">
-          {item.title}
+      <div className="text-center px-1">
+        <h4 className="font-sans font-bold text-lg md:text-xl text-primary uppercase mb-1 tracking-tight text-balance">
+          {item.name}
         </h4>
-        <p className="text-sm md:text-base text-primary font-sans">Tipo: {item.location}</p>
+        <p className="text-sm md:text-base text-primary font-sans">{item.category}</p>
+        {item.size && <p className="text-sm text-dark-text font-sans mt-0.5">Tamaño: {item.size}</p>}
       </div>
 
-      {item.images.length > 1 && (
+      {images.length > 1 && (
         <div className="flex justify-center gap-1.5 mt-3">
-          {item.images.map((_, index) => (
+          {images.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImage(index)}
               className={`w-2 h-2 rounded-full transition-colors ${
                 index === currentImage ? "bg-primary" : "bg-gray-300"
               }`}
-              aria-label={`Go to image ${index + 1}`}
+              aria-label={`Ir a la imagen ${index + 1}`}
             />
           ))}
         </div>
       )}
+
+      <div className="mt-4 flex flex-col gap-2">
+        <Link
+          href={`/soportes/${item.id}`}
+          className="w-full rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
+        >
+          Ver detalles
+        </Link>
+        {showMapLink ? (
+          <Link
+            href={`/presupuesto?soporte=${item.id}`}
+            className="w-full rounded-lg border border-primary px-4 py-2.5 text-center text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
+          >
+            Ver ubicación en el mapa
+          </Link>
+        ) : (
+          <span
+            title="Próximamente en el mapa"
+            aria-disabled="true"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-center text-sm font-semibold text-gray-400 cursor-not-allowed"
+          >
+            Ver ubicación en el mapa
+          </span>
+        )}
+      </div>
     </div>
   )
 }

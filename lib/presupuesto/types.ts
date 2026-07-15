@@ -10,6 +10,8 @@ export interface Soporte {
   imageUrl?: string
   /** Ruta a la página de detalle de este soporte (ej: "/soportes/cartel-alvear"). */
   soporteUrl?: string
+  /** Medida física del soporte (ej: "6x8 mts"). */
+  size?: string
 }
 
 /** "digital" -> pases por día + días de campaña. "rental" -> meses de alquiler. */
