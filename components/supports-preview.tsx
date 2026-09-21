@@ -11,12 +11,12 @@ export function SupportsPreview() {
       image: "/Acceso Norte.JPG",
     },
     {
-      title: "VALLADOS",
-      description: "Vallados publicitarios en zonas urbanas con alto tránsito.",
+      title: "SÉXTUPLES",
+      description: "Séxtuples publicitarios en zonas urbanas con alto tránsito.",
       image: "/ValladoAltura.jpg",
     },
     {
-      title: "FORMATOS DIGITALES",
+      title: "FORMATOS DIGITALES - MUPI",
       description: "Pantallas digitales en puntos estratégicos de gran circulación.",
       image: "/Imagen Tótems (2).jpeg",
     },
