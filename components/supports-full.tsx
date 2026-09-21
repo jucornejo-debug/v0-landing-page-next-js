@@ -75,17 +75,17 @@ export function SupportsFull() {
 
   const vallados = [
     {
-      title: "VALLADOS",
+      title: "SÉXTUPLE",
       location: "Simple",
       images: ["/Valladosimple.jpg", "/Valladosimple1.jpg"],
     },
     {
-      title: "HIPER VALLADOS",
+      title: "HIPER SÉXTUPLE",
       location: "Hiper Vallado",
       images: ["/HiperVallado2.jpeg", "/HiperVallado3.jpg"],
     },
     {
-      title: "VALLADOS DOBLE",
+      title: "SÉXTUPLES DOBLE",
       location: "Vallado Doble",
       images: ["/ValladoDoble.jpg", "/ValladoDoble1.jpg"],
     },
@@ -130,7 +130,7 @@ export function SupportsFull() {
                 {/* Formatos Digitales */}
         <div className="mb-16">
           <h3 className="font-sans font-bold text-primary uppercase mb-8 tracking-tight text-6xl text-center">
-            FORMATOS DIGITALES - Tótems
+            FORMATOS DIGITALES - Mupis
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
             {digitales.map((item, index) => (
@@ -162,10 +162,10 @@ export function SupportsFull() {
           </div>
         </div>
 
-        {/* Vallados */}
+        {/* Séxtuples */}
         <div className="mb-16">
           <h3 className="font-sans font-bold text-3xl text-primary uppercase mb-8 tracking-tight md:text-6xl text-center">
-            VALLADOS
+            SÉXTUPLES
           </h3>
           <div className="grid md:grid-cols-3 gap-8 justify-items-center">
             {vallados.map((item, index) => (
