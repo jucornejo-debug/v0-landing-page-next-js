@@ -38,7 +38,7 @@ export function SupportsFull() {
       images: ["/UCASAL.png", "/Caracteristicas.png"],
     },
   ]
-   {/* const pantallasLED = [
+    const pantallasLED = [
     {
       title: "Pantalla LED",
       location: "4x5m - Frente a la terminal de Salta",
@@ -54,7 +54,7 @@ export function SupportsFull() {
       location: "Bicentenario esq. O´higgins",
       images: ["/Pantalla - Bicentenario esq. Ohiggins.jpeg"],
     },
-  ]*/}
+  ]
   const grandesFormatos = [
     {
       title: "GRANDES FORMATOS",
@@ -138,7 +138,7 @@ export function SupportsFull() {
             ))}
           </div>
         </div>
-        {/*{/* Formatos Digitales Pantallas*/}
+        {/* Formatos Digitales Pantallas*/}
         <div className="mb-16">
           <h3 className="font-sans font-bold text-3xl text-primary uppercase mb-8 tracking-tight md:text-6xl text-center">
             Formatos Digitales - Pantallas LED
@@ -148,7 +148,7 @@ export function SupportsFull() {
               <SupportCard key={index} item={item} />
             ))}
           </div>
-        </div>*/}
+        </div>*
 
         {/* Grandes Formatos */}
         <div className="mb-16">
