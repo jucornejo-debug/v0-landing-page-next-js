@@ -38,7 +38,7 @@ export function SupportsFull() {
       images: ["/UCASAL.png", "/Caracteristicas.png"],
     },
   ]
-    const pantallasLED = [
+   {/* const pantallasLED = [
     {
       title: "Pantalla LED",
       location: "4x5m - Frente a la terminal de Salta",
@@ -54,7 +54,7 @@ export function SupportsFull() {
       location: "Bicentenario esq. O´higgins",
       images: ["/Pantalla - Bicentenario esq. Ohiggins.jpeg"],
     },
-  ]
+  ]*/}
   const grandesFormatos = [
     {
       title: "GRANDES FORMATOS",
